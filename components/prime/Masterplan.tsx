@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { usePrime } from "./PrimeContext";
 import Reveal from "./ui/Reveal";
 import { track } from "@/lib/analytics";
+import { getAssetPath } from "@/lib/useBasePath";
 import { ExpandIcon, DownloadIcon, CloseIcon } from "./ui/Icons";
 
 // "Explore the Property" — the real plot sketch, shown cleanly with a
@@ -51,7 +52,7 @@ export default function Masterplan() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={sketch}
+                src={getAssetPath(sketch)}
                 alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
                 width={749}
                 height={1058}
@@ -161,7 +162,7 @@ function SketchViewer({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={getAssetPath(src)}
           alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
           className="mx-auto block h-auto w-full max-w-2xl rounded-lg bg-ivory"
         />

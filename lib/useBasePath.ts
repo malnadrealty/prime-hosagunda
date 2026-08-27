@@ -1,9 +1,9 @@
 "use client";
 
 /**
- * Get asset path - for sketch component, just return the path as-is
- * Next.js handles public folder assets correctly with basePath
+ * With basePath /hosagunda, prepend it to all root-relative asset paths
  */
 export function getAssetPath(src: string): string {
-  return src;
+  if (!src || !src.startsWith("/")) return src;
+  return `/hosagunda${src}`;
 }
