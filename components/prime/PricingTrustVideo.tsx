@@ -19,13 +19,6 @@ export default function PricingTrustVideo() {
             {/* Eyebrow */}
             <p className="eyebrow text-red-600">TRUST &amp; VERIFICATION</p>
 
-            {/* Shield Icon — Large and Prominent */}
-            <div className="inline-flex">
-              <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-forest-500/15 to-forest-400/5 text-forest-600 ring-1 ring-forest-500/25 shadow-sm">
-                <ShieldCheckIcon width={48} height={48} />
-              </div>
-            </div>
-
             {/* Question Intro — Secondary Text */}
             {v.introKannada && (
               <p className="kannada text-lg font-bold leading-relaxed text-forest-900/85 max-w-lg">
