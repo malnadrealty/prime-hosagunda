@@ -47,7 +47,7 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
     if (!scrollRef.current) return;
 
     const element = scrollRef.current;
-    const scrollAmount = 300;
+    const scrollAmount = 80;
     let scrollDirection = 1;
     let cycles = 0;
 
@@ -55,7 +55,7 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
       element.scrollLeft += scrollAmount * scrollDirection;
       cycles++;
 
-      if (cycles >= 2) {
+      if (cycles >= 3) {
         scrollDirection *= -1;
         cycles = 0;
       }
@@ -63,7 +63,7 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
       if (element.scrollLeft === 0) {
         clearInterval(autoScroll);
       }
-    }, 600);
+    }, 1000);
   };
 
   return (
