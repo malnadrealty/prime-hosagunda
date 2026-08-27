@@ -90,7 +90,6 @@ export default function Masterplan() {
         <SketchViewer
           src={sketch}
           downloadName={downloadName}
-          failed={failed}
           onDownload={onDownload}
           onClose={() => setZoom(false)}
         />
@@ -103,13 +102,11 @@ export default function Masterplan() {
 function SketchViewer({
   src,
   downloadName,
-  failed,
   onDownload,
   onClose,
 }: {
   src: string;
   downloadName: string;
-  failed: boolean;
   onDownload: () => void;
   onClose: () => void;
 }) {
@@ -161,18 +158,12 @@ function SketchViewer({
         className="flex-1 overflow-auto px-3 pb-6"
         style={{ touchAction: "pinch-zoom", WebkitOverflowScrolling: "touch" }}
       >
-        {failed ? (
-          <div className="mx-auto mt-10 max-w-sm">
-            <SketchPlaceholder />
-          </div>
-        ) : (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={src}
-            alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
-            className="mx-auto block h-auto w-full max-w-2xl rounded-lg bg-ivory"
-          />
-        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
+          className="mx-auto block h-auto w-full max-w-2xl rounded-lg bg-ivory"
+        />
         <p className="mx-auto mt-4 max-w-sm text-center text-xs text-ivory/50">
           Pinch to zoom, or download the sketch to view it anytime.
         </p>
