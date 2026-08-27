@@ -30,6 +30,7 @@ type Node = {
 export default function LocationMap({ property }: { property: PropertyConfig }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [inView, setInView] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
 
   useEffect(() => {
     const el = ref.current;
@@ -59,6 +60,12 @@ export default function LocationMap({ property }: { property: PropertyConfig }) 
       window.clearTimeout(fallback);
     };
   }, []);
+
+  const restartAnimation = () => {
+    setInView(false);
+    setAnimKey((k) => k + 1);
+    setTimeout(() => setInView(true), 50);
+  };
 
   const conn = property.location_section.connectivity;
   const byNode = (n: string) => conn.find((c) => c.node === n);
@@ -103,9 +110,22 @@ export default function LocationMap({ property }: { property: PropertyConfig }) 
   return (
     <div
       ref={ref}
+      key={animKey}
       className={`lm relative overflow-hidden rounded-xl2 ${inView ? "is-in" : ""}`}
       style={{ backgroundColor: CREAM }}
     >
+      <button
+        type="button"
+        onClick={restartAnimation}
+        aria-label="Restart location map animation"
+        className="absolute top-4 right-4 z-10 inline-flex items-center gap-2 rounded-lg bg-forest-900/70 px-3 py-2 text-sm font-semibold text-ivory backdrop-blur-sm transition-colors hover:bg-forest-900/90"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M1 4v6h6M23 20v-6h-6" />
+          <path d="M20.49 9A9 9 0 0 0 5.64 5.64M3.51 15A9 9 0 0 0 18.36 18.36" />
+        </svg>
+        Replay
+      </button>
       <svg
         viewBox="0 0 1000 720"
         preserveAspectRatio="xMidYMid meet"
