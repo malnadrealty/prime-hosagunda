@@ -26,13 +26,18 @@ export default function Masterplan() {
     <section id="explore" className="scroll-mt-16 bg-forest-950 py-16 text-ivory sm:py-24">
       <div className="prime-container">
         <Reveal>
-          <p className="eyebrow-light mb-4">EXPLORE THE PROPERTY</p>
-          <h2 className="text-3xl font-bold leading-[1.12] sm:text-4xl">
-            14 Acres. <span className="text-moss">6 Private Parcels.</span>
+          <p className="eyebrow-light mb-4">{property.masterplan.headingKannada}</p>
+          <h2 className="kannada text-3xl font-bold leading-[1.12] sm:text-4xl">
+            {property.masterplan.mainLine}
           </h2>
+          <p className="mt-2 text-sm font-semibold tracking-wide text-moss">
+            {property.masterplan.supportingLine}
+          </p>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ivory/70">
-            The entire property is planned into 6 individual parcels. Explore the full plot
-            sketch below — tap it to view full-screen, or download it to your phone.
+            {property.masterplan.description}
+          </p>
+          <p className="mt-2 font-medium text-ivory">
+            {property.masterplan.highlight}
           </p>
         </Reveal>
 

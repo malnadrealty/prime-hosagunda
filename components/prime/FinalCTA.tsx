@@ -31,14 +31,19 @@ export default function FinalCTA() {
       <div className="prime-container relative z-10 grid grid-cols-1 items-center gap-10 py-16 sm:py-20 lg:grid-cols-[1.2fr_0.8fr]">
         {/* Left — CTA */}
         <Reveal>
-          <p className="kannada text-lg leading-snug text-moss sm:text-xl">
-            ಇಷ್ಟವಾದರೆ, ಮುಂದಿನ ಹೆಜ್ಜೆ ಜಾಗ ನೋಡೋದು.
-          </p>
-          <h2 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">Come See the Land.</h2>
-          <div className="mt-5 max-w-lg space-y-1 text-[15px] text-ivory/70">
-            <p>You&apos;ve seen the plantation. You&apos;ve seen the layout.</p>
-            <p>You&apos;ve seen the available parcels. You&apos;ve seen the prices.</p>
-            <p className="text-ivory">Now experience the land yourself.</p>
+          <h2 className="kannada text-3xl font-bold leading-[1.15] sm:text-4xl">
+            {property.finalCTA.headingKannada?.map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
+          </h2>
+          <div className="mt-5 max-w-lg space-y-2 text-[15px] text-ivory/70">
+            {property.finalCTA.statements?.map((stmt, i) => (
+              <p key={i} className={i === property.finalCTA.statements!.length - 1 ? "text-ivory font-medium" : ""}>
+                {stmt}
+              </p>
+            ))}
           </div>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -50,7 +55,7 @@ export default function FinalCTA() {
               className="btn-green"
             >
               <CalendarIcon width={18} height={18} />
-              Schedule a Site Visit
+              {property.finalCTA.ctaPrimary}
             </a>
             <a
               href={whatsappUrl({ kind: "general" })}
@@ -60,7 +65,7 @@ export default function FinalCTA() {
               className="btn-outline-light"
             >
               <WhatsAppIcon width={17} height={17} />
-              WhatsApp Malnad Realty
+              {property.finalCTA.ctaSecondary}
             </a>
           </div>
         </Reveal>
@@ -88,8 +93,16 @@ export default function FinalCTA() {
       </div>
 
       {/* Closing Kannada line */}
-      <div className="prime-container relative z-10 border-t border-white/10 py-6 text-center">
-        <p className="kannada text-base text-moss">ಬೆಳೆದಿರುವ ತೋಟದಲ್ಲಿ ನಿಮ್ಮದೇ ಒಂದು ಜಾಗ.</p>
+      <div className="prime-container relative z-10 border-t border-white/10 py-8 text-center">
+        <p className="kannada text-lg font-semibold leading-relaxed text-moss">
+          {property.finalCTA.closingKannada?.map((line, i) => (
+            <span key={i} className="block">
+              {line}
+            </span>
+          ))}
+        </p>
+        <p className="mt-3 text-sm text-ivory/60">{property.finalCTA.tagline}</p>
+        <p className="mt-2 kannada text-sm text-ivory">{property.finalCTA.finalMessage}</p>
       </div>
     </section>
   );

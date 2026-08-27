@@ -6,21 +6,28 @@ import Reveal from "./ui/Reveal";
 
 export default function GallerySection() {
   const { property, openGallery } = usePrime();
-  const items = property.gallery;
+  const galleryData = property.gallery;
+  const items = galleryData.items;
 
   return (
     <section id="gallery" className="scroll-mt-16 bg-cream py-16 sm:py-24">
       <div className="prime-container grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr] lg:items-center lg:gap-10">
         {/* Left — heading */}
         <Reveal>
-          <p className="eyebrow mb-4">SEE IT AS IT IS</p>
-          <h2 className="text-3xl font-bold leading-[1.12] tracking-tight text-forest-900 sm:text-[2.2rem]">
-            No Renders.
-            <br />
-            <span className="text-forest-600">No Artificial Views.</span>
+          <h2 className="kannada text-3xl font-bold leading-[1.12] tracking-tight text-forest-900 sm:text-[2.2rem]">
+            {galleryData.headingKannada?.map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
           </h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-forest-900/65">
-            What you see is what exists on the land today.
+          <p className="mt-3 font-semibold uppercase text-forest-600">
+            {galleryData.subtitle?.map((line, i) => (
+              <span key={i}>{line} </span>
+            ))}
+          </p>
+          <p className="mt-2 text-[15px] leading-relaxed text-forest-900/65">
+            {galleryData.supporting}
           </p>
         </Reveal>
 

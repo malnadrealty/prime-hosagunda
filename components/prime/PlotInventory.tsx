@@ -47,13 +47,10 @@ export default function PlotInventory() {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="eyebrow mb-3">AVAILABLE PLOTS</p>
-              <h2 className="text-3xl font-bold tracking-tight text-forest-900 sm:text-4xl">
-                Choose Your Parcel
+              <p className="eyebrow mb-3">{property.plotInventory.headingKannada}</p>
+              <h2 className="kannada text-3xl font-bold tracking-tight text-forest-900 sm:text-4xl">
+                {property.plotInventory.subheadingKannada}
               </h2>
-              <p className="mt-2 text-[15px] text-forest-900/70">
-                Current availability &amp; pricing
-              </p>
             </div>
             <button
               type="button"

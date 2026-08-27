@@ -112,7 +112,7 @@ export default function PropertyPage({
       <GalleryLightbox
         open={gallery.open}
         index={gallery.index}
-        items={property.gallery}
+        items={property.gallery.items}
         onClose={() => setGallery((s) => ({ ...s, open: false }))}
         onIndex={(i) => setGallery({ open: true, index: i })}
       />

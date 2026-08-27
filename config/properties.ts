@@ -26,18 +26,18 @@ export const hosagunda: PropertyConfig = {
   premiumLabel: "PRIME",
 
   eyebrow: "HOSAGUNDA · SAGARA TALUK",
-  headlineKannada: ["ಬೆಳೆದಿರುವ ತೋಟ.", "ಫಲವತ್ತಾದ ಮಣ್ಣು.", "ನಿಮ್ಮದೇ ಒಂದು ಎಕರೆ."],
-  headlineEnglish: ["A Living Plantation.", "6 Private Parcels."],
-  heroSupport: "14 Acres of established plantation land in Hosagunda, Sagara Taluk.",
+  headlineKannada: ["ಜಮೀನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?", "ಒಮ್ಮೆ ಈ ತೋಟ ನೋಡಿ."],
+  headlineEnglish: ["Looking for land?", "See this plantation."],
+  heroSupport: "14 Acres of Green. 6 Plots in Hosagunda.",
   cropLine: "Areca · Coffee · Rubber · Coconut · Pepper",
-  inventoryLine: "6 Private Parcels  |  From 1 Acre onwards",
+  inventoryLine: "2 KM from NH 206 · Bangalore–Honnavar Highway",
 
   crops: [
     {
       key: "arecanut",
       name: "Arecanut",
       nameKannada: "ಅಡಿಕೆ",
-      age: "3 years old",
+      age: "3 ವರ್ಷಗಳ ಬೆಳವಣಿಗೆ",
       descriptor: "Growing arecanut plantation.",
       image: `${IMG}/crops/arecanut.jpg`,
       alt: "Arecanut palms growing in the Hosagunda plantation",
@@ -46,7 +46,7 @@ export const hosagunda: PropertyConfig = {
       key: "coffee",
       name: "Coffee",
       nameKannada: "ಕಾಫಿ",
-      age: "2 years old",
+      age: "2 ವರ್ಷಗಳ ಬೆಳವಣಿಗೆ",
       descriptor: "Young coffee plants already growing.",
       image: `${IMG}/crops/coffee.jpg`,
       alt: "Coffee plants with ripening berries at Hosagunda",
@@ -55,7 +55,7 @@ export const hosagunda: PropertyConfig = {
       key: "rubber",
       name: "Rubber",
       nameKannada: "ರಬ್ಬರ್",
-      age: "20 years old",
+      age: "20 ವರ್ಷಗಳ ಹಳೆಯ ತೋಟ",
       descriptor: "Established rubber plantation.",
       image: `${IMG}/crops/rubber.jpg`,
       alt: "Mature rubber trees being tapped at Hosagunda",
@@ -64,7 +64,7 @@ export const hosagunda: PropertyConfig = {
       key: "pepper",
       name: "Pepper",
       nameKannada: "ಕಾಳುಮೆಣಸು",
-      age: "3 years old",
+      age: "3 ವರ್ಷಗಳ ಬೆಳವಣಿಗೆ",
       descriptor: "Pepper growing in the plantation.",
       image: `${IMG}/crops/pepper.jpg`,
       alt: "Pepper vines climbing support trees at Hosagunda",
@@ -73,7 +73,7 @@ export const hosagunda: PropertyConfig = {
       key: "coconut",
       name: "Coconut",
       nameKannada: "ತೆಂಗು",
-      age: "Existing plantation",
+      age: "ಈಗಾಗಲೇ ಇರುವ ತೋಟ",
       descriptor: "Coconut trees already form part of the green landscape.",
       image: `${IMG}/crops/coconut.jpg`,
       alt: "Coconut palms across the Hosagunda plantation",
@@ -106,52 +106,59 @@ export const hosagunda: PropertyConfig = {
 
   story: {
     eyebrow: "THE STORY OF THIS LAND",
-    headingKannada: ["ಇದು ಬರೀ ಜಮೀನು ಅಲ್ಲ.", "ಈಗಾಗಲೇ ಬೆಳೆದಿರುವ ತೋಟ."],
+    headingKannada: ["ಇದು ಖಾಲಿ ಜಮೀನು ಅಲ್ಲ.", "ಇಲ್ಲಿ ತೋಟ ಈಗಾಗಲೇ ಇದೆ."],
     paragraphs: [
-      "Some farmland begins with an empty piece of land and a promise of what it could become.",
-      "This one already has a story.",
-      "Across these 14 acres, areca, coffee, rubber, coconut and pepper are already growing.",
-      "The land has good red soil, fertile agricultural ground and a good water table, supported by 3 borewell points across the property.",
-      "The rubber plantation is around 20 years old. Arecanut and pepper are around 3 years old, while the coffee plantation is around 2 years old.",
-      "Now, this established plantation is being offered as 6 private parcels.",
+      "ಒಂದು ಕಡೆ ಹಳೆಯ Rubber ಮರಗಳು.",
+      "ಇನ್ನೊಂದು ಕಡೆ ಬೆಳೆದ Arecanut.",
+      "Coffee, Pepper ಮತ್ತು Coconut ಕೂಡ ಇಲ್ಲಿವೆ.",
+      "ಅಂದರೆ, ನೀವು ಶೂನ್ಯದಿಂದ ಶುರು ಮಾಡಬೇಕಿಲ್ಲ.",
+      "ಈಗಾಗಲೇ ಬೆಳೆಯುತ್ತಿರುವ ತೋಟದ ನಡುವೆ",
+      "ನಿಮ್ಮದೇ ಒಂದು ಜಾಗ ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳಬಹುದು.",
     ],
-    closing: "A piece of land that is already alive.",
+    closing: "14 Acres · 6 Plots · Hosagunda, Sagara Taluk",
   },
 
   plantation: {
     eyebrow: "THE PLANTATION",
-    headingKannada: "ಈಗಾಗಲೇ ಬೆಳೆಯುತ್ತಿರುವ ತೋಟ.",
-    subheading: "Five Crops. One Living Landscape.",
+    headingKannada: "ಈ ಜಮೀನಿನಲ್ಲಿ ಏನು ಬೆಳೆಯುತ್ತಿದೆ?",
+    subheading: "ಒಂದೇ ತೋಟದಲ್ಲಿ 5 ಬೆಳೆಗಳು.",
   },
 
   waterSection: {
     eyebrow: "WATER",
-    heading: ["A Good Water Table.", "A Healthy Foundation for the Land."],
+    heading: ["GOOD WATER TABLE", "ನೀರಿನ ಲಭ್ಯತೆ ಉತ್ತಮವಾಗಿದೆ."],
     headingKannada: ["ತೋಟಕ್ಕೆ ನೀರು.", "ಜಮೀನಿಗೆ ಜೀವ."],
-    body: "The property has a good water table, with 3 borewell points spread across the 14-acre land.",
-    secondary: "Water is already part of this land's story.",
+    body: "ಈಗಾಗಲೇ ಬೆಳೆ ಬೆಳೆಯುತ್ತಿರುವ ತೋಟಕ್ಕೆ ನೀರಿನ ವ್ಯವಸ್ಥೆಯೂ ಇದೆ.",
+    secondary: "ತೋಟ ಬೆಳೆಯುತ್ತಿದೆ. ಅದಕ್ಕೆ ಬೇಕಾದ ನೀರೂ ಇಲ್ಲಿದೆ.",
     borewellValue: "03",
-    borewellLabel: "Borewell Points",
-    tableLabel: "Good Water Table",
-    extentLabel: "Across 14 Acres",
+    borewellLabel: "BOREWELL POINTS",
+    tableLabel: "14 ಎಕರೆ ಜಮೀನಿನಾದ್ಯಂತ",
+    extentLabel: "",
     image: `${IMG}/water.jpg`,
     imageLabel: "PLANTATION WATER POINT",
   },
 
   location_section: {
-    headingKannada: ["ನಗರದಿಂದ ದೂರವಲ್ಲ.", "ಗದ್ದಲದಿಂದ ದೂರ."],
-    support: "Well connected to major roads and key places around.",
+    headingKannada: ["ಜಮೀನು ಹಸಿರಿನ ನಡುವೆ.", "ತಲುಪೋದು ಸುಲಭ."],
+    support: "ನಗರಕ್ಕೆ ಹತ್ತಿರ. ಗದ್ದಲದಿಂದ ದೂರ.",
     connectivity: [
-      { distance: "2 KM", place: "From NH 206", node: "NH 206", subtitle: "Bangalore–Honnavar Highway" },
-      { distance: "10 KM", place: "From Anandapura", node: "Anandapura" },
-      { distance: "15 KM", place: "From Sagara", node: "Sagara" },
+      { distance: "2 KM", place: "NH 206", node: "NH 206", subtitle: "Bangalore–Honnavar Highway" },
+      { distance: "10 KM", place: "ANANDAPURA", node: "Anandapura" },
+      { distance: "15 KM", place: "SAGARA", node: "Sagara" },
     ],
     privacyNote:
-      "Exact property location is shared with genuine prospects during site-visits.",
+      "ನಿಖರವಾದ Property Location onlineನಲ್ಲಿ ಇಲ್ಲ. ನಿಜವಾದ ಆಸಕ್ತರಿಗೆ Site Visit ಸಮಯದಲ್ಲಿ ನಿಖರವಾದ ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.",
   },
 
   // Six parcels laid out on a 0..100 grid — a clean 3×2 masterplan sketch.
   masterplan: {
+    headingKannada: "ನಿಮ್ಮ ಜಾಗ ಯಾವುದು?",
+    mainLine: "14 ಎಕರೆ. 6 ಜಾಗಗಳು.",
+    supportingLine: "1 ಎಕರೆದಿಂದ 2 ಎಕರೆವರೆಗೆ",
+    description: "ಈ ಜಮೀನನ್ನು 6 ಪ್ರತ್ಯೇಕ ಜಾಗಗಳಾಗಿ ವಿಂಗಡಿಸಲಾಗಿದೆ.",
+    highlight: "ನಿಮಗೆ ಸರಿಹೊಂದುವ ಜಾಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+    tapInstruction: "ಜಾಗದ ಮೇಲೆ Tap ಮಾಡಿ",
+    tapDetails: "ಗಾತ್ರ · ಬೆಲೆ · ಲಭ್ಯತೆ",
     plots: [
       { plotNumber: "01", points: "4,6 35,6 35,50 4,50", label: { x: 19.5, y: 28 } },
       { plotNumber: "02", points: "35,6 66,6 66,50 35,50", label: { x: 50.5, y: 28 } },
@@ -162,16 +169,22 @@ export const hosagunda: PropertyConfig = {
     ],
   },
 
+  plotInventory: {
+    headingKannada: "ನಿಮ್ಮ ಜಾಗ ಆಯ್ಕೆ ಮಾಡಿ.",
+    subheadingKannada: "ಯಾವ ಜಾಗ ನಿಮಗೆ ಇಷ್ಟ?",
+  },
+
   pricing: {
+    headingKannada: "ಬೆಲೆ ತಿಳಿಯಲು Call ಮಾಡಬೇಕಿಲ್ಲ.",
+    mainLineKannada: "ಎಲ್ಲಾ ವಿವರಗಳು ಇಲ್ಲೇ ಸ್ಪಷ್ಟವಾಗಿವೆ.",
     checklist: [
-      "No hidden pricing",
-      'No "Call for Price"',
-      "Plot measurement",
-      "Price per Gunta",
-      "Total plot price",
-      "Current booking status",
+      "ಜಾಗದ ಗಾತ್ರ",
+      "ಪ್ರತಿ ಗುಂಟೆಯ ಬೆಲೆ",
+      "ಒಟ್ಟು ಬೆಲೆ",
+      "ಲಭ್ಯತೆ",
     ],
     updatedNote: "Prices and availability are updated regularly.",
+    closingKannada: "ನಿಮ್ಮ Budgetಗೆ ಹೊಂದುವ ಜಾಗವನ್ನು ಇಲ್ಲೇ ಆಯ್ಕೆ ಮಾಡಿ.",
     disclaimer:
       "Applicable registration, government and other charges, if any, will be communicated clearly before purchase.",
   },
@@ -179,21 +192,26 @@ export const hosagunda: PropertyConfig = {
   verification: {
     legalTitle: true,
     verifiedByMalnadRealty: true,
-    headline: ["100% Legal Titles.", "Verified by Malnad Realty."],
-    support: "We believe buying land should begin with clarity and trust.",
+    headline: ["100% LEGAL TITLES", "Verified by Malnad Realty"],
+    support: "ನಿಮ್ಮ ನಿರ್ಧಾರಕ್ಕೆ ಬೇಕಾದ ಮೂಲ ಮಾಹಿತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ನೀಡುವುದು ನಮ್ಮ ಜವಾಬ್ದಾರಿ.",
     detail:
-      "Property details and ownership documentation have been verified by Malnad Realty as part of our property verification process.",
+      "Property details and ownership documents have been verified by Malnad Realty.",
   },
 
-  gallery: [
-    { src: `${IMG}/gallery/areca.jpg`, alt: "Areca palms at Hosagunda", caption: "Areca", category: "CROPS" },
-    { src: `${IMG}/gallery/coffee.jpg`, alt: "Coffee plants at Hosagunda", caption: "Coffee", category: "CROPS" },
-    { src: `${IMG}/gallery/rubber.jpg`, alt: "Rubber tapping at Hosagunda", caption: "Rubber", category: "CROPS" },
-    { src: `${IMG}/gallery/pepper.jpg`, alt: "Pepper vines at Hosagunda", caption: "Pepper", category: "CROPS" },
-    { src: `${IMG}/gallery/coconut.jpg`, alt: "Coconut palms at Hosagunda", caption: "Coconut", category: "CROPS" },
-    { src: `${IMG}/gallery/red-soil.jpg`, alt: "Fertile red soil at Hosagunda", caption: "Red Soil", category: "SOIL" },
-    { src: `${IMG}/gallery/landscape.jpg`, alt: "Plantation landscape at Hosagunda", caption: "Landscape", category: "LAND" },
-  ],
+  gallery: {
+    headingKannada: ["ಫೋಟೋದಲ್ಲಿ ಹೇಗಿದೆಯೋ,", "ಜಮೀನಿನಲ್ಲೂ ಹಾಗೆಯೇ ಇದೆ."],
+    subtitle: ["NO RENDERS.", "NO ARTIFICIAL VIEWS."],
+    supporting: "ಈ ಫೋಟೋಗಳು ಇದೇ ಜಮೀನಿನಲ್ಲಿ ತೆಗೆದವು.",
+    items: [
+      { src: `${IMG}/gallery/areca.jpg`, alt: "Areca palms at Hosagunda", caption: "Areca", category: "CROPS" },
+      { src: `${IMG}/gallery/coffee.jpg`, alt: "Coffee plants at Hosagunda", caption: "Coffee", category: "CROPS" },
+      { src: `${IMG}/gallery/rubber.jpg`, alt: "Rubber tapping at Hosagunda", caption: "Rubber", category: "CROPS" },
+      { src: `${IMG}/gallery/pepper.jpg`, alt: "Pepper vines at Hosagunda", caption: "Pepper", category: "CROPS" },
+      { src: `${IMG}/gallery/coconut.jpg`, alt: "Coconut palms at Hosagunda", caption: "Coconut", category: "CROPS" },
+      { src: `${IMG}/gallery/red-soil.jpg`, alt: "Fertile red soil at Hosagunda", caption: "Red Soil", category: "SOIL" },
+      { src: `${IMG}/gallery/landscape.jpg`, alt: "Plantation landscape at Hosagunda", caption: "Landscape", category: "LAND" },
+    ],
+  },
 
   video: {
     type: "youtube",
@@ -203,54 +221,86 @@ export const hosagunda: PropertyConfig = {
     available: false,
   },
 
+  finalCTA: {
+    headingKannada: ["ಫೋಟೋದಲ್ಲಿ ನೋಡಿದಿರಿ.", "ಈಗ ಜಾಗಕ್ಕೆ ಬಂದು ನೋಡಿ."],
+    statements: [
+      "ತೋಟವನ್ನು ನೋಡಿ.",
+      "ಮಣ್ಣನ್ನು ಕೈಯಲ್ಲಿ ಹಿಡಿದು ನೋಡಿ.",
+      "ಜಾಗವನ್ನು ನಡೆದು ನೋಡಿ.",
+      "ನಿಮಗೆ ಇಷ್ಟವಾದ ಜಾಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+    ],
+    ctaHeading: "COME SEE THE LAND.",
+    ctaPrimary: "SCHEDULE A SITE VISIT",
+    ctaSecondary: "WHATSAPP MALNAD REALTY",
+    closingKannada: ["ಬೆಳೆದಿರುವ ತೋಟದ ನಡುವೆ", "ನಿಮ್ಮದೇ ಒಂದು ಜಾಗ."],
+    tagline: "14 Acres · 6 Plots · Hosagunda",
+    finalMessage: "ನಿಮ್ಮ ಜಾಗ ಇಲ್ಲಿರಬಹುದು.",
+  },
+
   faq: [
     {
-      q: "What is the total extent of the property?",
-      a: "The total property extends across 14 acres.",
+      q: "ಈ ಜಮೀನು ಎಲ್ಲಿದೆ?",
+      a: "Hosagunda, Sagara Taluk.",
     },
     {
-      q: "How many parcels are available?",
-      a: "The property has been divided into 6 individual parcels.",
+      q: "ಒಟ್ಟು ಎಷ್ಟು ಎಕರೆ?",
+      a: "14 Acres.",
     },
     {
-      q: "What crops are currently growing?",
-      a: "The plantation includes areca, coffee, rubber, coconut and pepper.",
+      q: "ಎಷ್ಟು ಜಾಗಗಳಿವೆ?",
+      a: "ಒಟ್ಟು 6 ಜಾಗಗಳು.",
     },
     {
-      q: "How old are the plantations?",
-      a: "Rubber is approximately 20 years old, arecanut and pepper are approximately 3 years old, and coffee is approximately 2 years old.",
+      q: "ಜಾಗಗಳ ಗಾತ್ರ ಎಷ್ಟು?",
+      a: "1 ಎಕರೆದಿಂದ 2 ಎಕರೆವರೆಗೆ.",
     },
     {
-      q: "How is the water availability?",
-      a: "The property has a good water table with 3 borewell points across the 14-acre property.",
+      q: "ಯಾವ ಬೆಳೆಗಳಿವೆ?",
+      a: "Areca, Coffee, Rubber, Coconut ಮತ್ತು Pepper.",
     },
     {
-      q: "What type of soil does the property have?",
-      a: "The property has good red soil and fertile agricultural land.",
+      q: "Rubber ತೋಟ ಎಷ್ಟು ಹಳೆಯದು?",
+      a: "ಸುಮಾರು 20 ವರ್ಷ.",
     },
     {
-      q: "How far is the property from NH 206?",
-      a: "Approximately 2 km from NH 206.",
+      q: "Arecanut ಎಷ್ಟು ವರ್ಷ?",
+      a: "ಸುಮಾರು 3 ವರ್ಷ.",
     },
     {
-      q: "How far is Anandapura?",
-      a: "Approximately 10 km from Anandapura.",
+      q: "Coffee ಎಷ್ಟು ವರ್ಷ?",
+      a: "ಸುಮಾರು 2 ವರ್ಷ.",
     },
     {
-      q: "How far is Sagara?",
-      a: "Approximately 15 km from Sagara.",
+      q: "Pepper ಎಷ್ಟು ವರ್ಷ?",
+      a: "ಸುಮಾರು 3 ವರ್ಷ.",
     },
     {
-      q: "Can I choose a specific parcel?",
-      a: "Yes. You can choose from the currently available parcels, subject to availability.",
+      q: "ನೀರಿನ ವ್ಯವಸ್ಥೆ ಹೇಗಿದೆ?",
+      a: "ಉತ್ತಮ Water Table ಮತ್ತು 3 Borewell Points.",
     },
     {
-      q: "Can I visit the property?",
-      a: "Yes. Site visits can be scheduled with Malnad Realty.",
+      q: "ಮಣ್ಣು ಹೇಗಿದೆ?",
+      a: "ಉತ್ತಮ ಹಾಗೂ ಫಲವತ್ತಾದ ಕೆಂಪು ಮಣ್ಣು.",
     },
     {
-      q: "Is the exact location available online?",
-      a: "The exact property location is not publicly displayed. It will be shared with genuine prospects as part of the site-visit process.",
+      q: "NH 206 ಎಷ್ಟು ದೂರ?",
+      a: "ಸುಮಾರು 2 KM.",
+    },
+    {
+      q: "Anandapura ಎಷ್ಟು ದೂರ?",
+      a: "ಸುಮಾರು 10 KM.",
+    },
+    {
+      q: "Sagara ಎಷ್ಟು ದೂರ?",
+      a: "ಸುಮಾರು 15 KM.",
+    },
+    {
+      q: "Exact location onlineನಲ್ಲಿ ಏಕೆ ಇಲ್ಲ?",
+      a: "ನಿಜವಾದ ಆಸಕ್ತರಿಗೆ Site Visit ಸಮಯದಲ್ಲಿ ನಿಖರವಾದ ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.",
+    },
+    {
+      q: "Site Visit ಮಾಡಬಹುದೇ?",
+      a: "ಹೌದು. Malnad Realty ಮೂಲಕ Site Visit schedule ಮಾಡಬಹುದು.",
     },
   ],
 

@@ -180,13 +180,28 @@ export type PropertyConfig = {
   };
 
   masterplan: {
+    headingKannada?: string;
+    mainLine?: string;
+    supportingLine?: string;
+    description?: string;
+    highlight?: string;
+    tapInstruction?: string;
+    tapDetails?: string;
     image?: string; // optional sketch image behind polygons
     plots: MasterplanPlot[];
   };
 
+  plotInventory: {
+    headingKannada: string;
+    subheadingKannada: string;
+  };
+
   pricing: {
+    headingKannada?: string;
+    mainLineKannada?: string;
     checklist: string[];
     updatedNote: string;
+    closingKannada?: string;
     disclaimer: string;
   };
 
@@ -198,8 +213,24 @@ export type PropertyConfig = {
     detail: string;
   };
 
-  gallery: GalleryItem[];
+  gallery: {
+    headingKannada?: string[];
+    subtitle?: string[];
+    supporting?: string;
+    items: GalleryItem[];
+  };
   video: PropertyVideo;
+
+  finalCTA: {
+    headingKannada?: string[];
+    statements?: string[];
+    ctaHeading?: string;
+    ctaPrimary?: string;
+    ctaSecondary?: string;
+    closingKannada?: string[];
+    tagline?: string;
+    finalMessage?: string;
+  };
 
   faq: FaqItem[];
 
