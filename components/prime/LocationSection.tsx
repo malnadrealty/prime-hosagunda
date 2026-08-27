@@ -15,17 +15,17 @@ export default function LocationSection() {
         {/* Left — information panel */}
         <Reveal>
           <p className="eyebrow mb-4">LOCATION &amp; CONNECTIVITY</p>
-          <h2 className="text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-[2.6rem]">
+          <h2 className="text-h2 text-forest-900">
             {property.location},<br className="hidden sm:block" /> {property.taluk}
           </h2>
-          <p className="kannada mt-3 text-xl leading-snug text-forest-600 sm:text-2xl">
+          <p className="kannada-h3 mt-3 text-forest-600">
             {loc.headingKannada.map((line, i) => (
               <span key={i} className="block">
                 {line}
               </span>
             ))}
           </p>
-          <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-forest-900/70">
+          <p className="mt-5 max-w-sm text-body text-forest-900/70">
             {loc.support}
           </p>
 
@@ -43,13 +43,13 @@ export default function LocationSection() {
                   style={{ backgroundColor: "#315C3C" }}
                   aria-hidden
                 />
-                <span className="w-[4.5rem] flex-none text-2xl font-extrabold tracking-tight text-forest-900">
+                <span className="w-[4.5rem] flex-none text-h3 font-extrabold tracking-tight text-forest-900">
                   {c.distance}
                 </span>
                 <span>
-                  <span className="block text-sm font-semibold text-forest-900">{c.place}</span>
+                  <span className="block text-label font-semibold text-forest-900">{c.place}</span>
                   {c.subtitle && (
-                    <span className="block text-xs text-brand-gray">{c.subtitle}</span>
+                    <span className="block text-tiny text-brand-gray">{c.subtitle}</span>
                   )}
                 </span>
               </li>
@@ -59,7 +59,7 @@ export default function LocationSection() {
           {/* Privacy card */}
           <div className="mt-6 flex items-start gap-3 rounded-xl2 border border-forest-700/10 bg-cream p-4">
             <ShieldCheckIcon width={20} height={20} className="mt-0.5 flex-none text-forest-600" />
-            <p className="text-sm leading-snug text-forest-900/70">{loc.privacyNote}</p>
+            <p className="text-label leading-snug text-forest-900/70">{loc.privacyNote}</p>
           </div>
         </Reveal>
 

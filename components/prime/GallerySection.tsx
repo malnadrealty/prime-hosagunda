@@ -14,19 +14,19 @@ export default function GallerySection() {
       <div className="prime-container grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr] lg:items-center lg:gap-10">
         {/* Left — heading */}
         <Reveal>
-          <h2 className="kannada text-3xl font-bold leading-[1.12] tracking-tight text-forest-900 sm:text-[2.2rem]">
+          <h2 className="kannada-h2 text-forest-900">
             {galleryData.headingKannada?.map((line, i) => (
               <span key={i} className="block">
                 {line}
               </span>
             ))}
           </h2>
-          <p className="mt-3 font-semibold uppercase text-forest-600">
+          <p className="mt-3 text-label font-semibold uppercase text-forest-600">
             {galleryData.subtitle?.map((line, i) => (
               <span key={i}>{line} </span>
             ))}
           </p>
-          <p className="mt-2 text-[15px] leading-relaxed text-forest-900/65">
+          <p className="mt-2 text-body leading-relaxed text-forest-900/65">
             {galleryData.supporting}
           </p>
         </Reveal>
@@ -53,7 +53,7 @@ export default function GallerySection() {
                     sizes="(min-width: 1024px) 12vw, 42vw"
                   />
                   <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent p-2.5">
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-ivory">
+                    <span className="eyebrow text-ivory">
                       {item.caption}
                     </span>
                   </span>

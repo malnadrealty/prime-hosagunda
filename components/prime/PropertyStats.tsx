@@ -15,7 +15,7 @@ export default function PropertyStats() {
           <p className="eyebrow mb-3">AT A GLANCE</p>
           <h2
             id="glance-heading"
-            className="text-[1.7rem] font-bold leading-[1.15] tracking-tight text-forest-900"
+            className="text-h2 text-forest-900"
           >
             14 Acres. 6 Plots.
             <br />
@@ -29,7 +29,7 @@ export default function PropertyStats() {
               <div className="flex h-full flex-col rounded-2xl border border-forest-700/10 bg-white px-5 py-6 shadow-card">
                 <div className="flex flex-wrap items-baseline gap-x-1.5">
                   <span
-                    className={`text-[2.5rem] font-extrabold leading-[0.9] tracking-tight ${
+                    className={`text-h3 font-extrabold leading-[0.95] tracking-tight ${
                       s.emphasis ? "text-brand-red" : "text-forest-900"
                     }`}
                   >
@@ -37,7 +37,7 @@ export default function PropertyStats() {
                   </span>
                   {s.unit && (
                     <span
-                      className={`text-[11px] font-bold uppercase tracking-[0.16em] ${
+                      className={`eyebrow ${
                         s.emphasis ? "text-brand-red" : "text-forest-500"
                       }`}
                     >
@@ -53,7 +53,7 @@ export default function PropertyStats() {
                   aria-hidden
                 />
 
-                <p className="mt-3 text-[13px] font-medium leading-snug text-forest-900/70">
+                <p className="mt-3 text-label text-forest-900/70">
                   {s.label}
                 </p>
               </div>

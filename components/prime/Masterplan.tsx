@@ -27,16 +27,16 @@ export default function Masterplan() {
       <div className="prime-container">
         <Reveal>
           <p className="eyebrow-light mb-4">{property.masterplan.headingKannada}</p>
-          <h2 className="kannada text-3xl font-bold leading-[1.12] sm:text-4xl">
+          <h2 className="kannada-h2 text-ivory">
             {property.masterplan.mainLine}
           </h2>
-          <p className="mt-2 text-sm font-semibold tracking-wide text-moss">
+          <p className="mt-2 text-label font-semibold tracking-wide text-moss">
             {property.masterplan.supportingLine}
           </p>
-          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ivory/70">
+          <p className="mt-4 max-w-xl text-body text-ivory/70">
             {property.masterplan.description}
           </p>
-          <p className="mt-2 font-medium text-ivory">
+          <p className="mt-2 text-label font-medium text-ivory">
             {property.masterplan.highlight}
           </p>
         </Reveal>

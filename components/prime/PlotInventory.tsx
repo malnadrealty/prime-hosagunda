@@ -48,10 +48,10 @@ export default function PlotInventory() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow mb-3">{property.plotInventory.headingKannada}</p>
-              <h2 className="text-3xl font-bold tracking-tight text-forest-900 sm:text-4xl">
+              <h2 className="text-h2 text-forest-900">
                 {property.plotInventory.subheadingKannada}
               </h2>
-              <p className="mt-2 text-[15px] text-forest-900/70">
+              <p className="mt-2 text-body text-forest-900/70">
                 Current Availability &amp; Pricing
               </p>
             </div>
@@ -59,7 +59,7 @@ export default function PlotInventory() {
               type="button"
               onClick={refresh}
               disabled={refreshing}
-              className="rounded-lg border border-forest-700/20 px-3.5 py-2 text-xs font-semibold text-forest-700 transition-colors hover:bg-forest-700/5 disabled:opacity-50"
+              className="rounded-lg border border-forest-700/20 px-3.5 py-2 text-tiny font-semibold text-forest-700 transition-colors hover:bg-forest-700/5 disabled:opacity-50"
             >
               {refreshing ? "Refreshing…" : "Refresh availability"}
             </button>
@@ -67,7 +67,7 @@ export default function PlotInventory() {
         </Reveal>
 
         {errored && (
-          <p className="mt-6 rounded-lg border border-brand-red/20 bg-brand-red/5 px-4 py-3 text-sm text-forest-900/70">
+          <p className="mt-6 rounded-lg border border-brand-red/20 bg-brand-red/5 px-4 py-3 text-label text-forest-900/70">
             Availability is temporarily being updated. Please contact Malnad Realty for the
             latest status.
           </p>
@@ -97,7 +97,7 @@ export default function PlotInventory() {
                   )}
 
                   <div className={`flex items-center justify-between ${premium ? "mt-1.5" : ""}`}>
-                    <p className={`text-xs font-bold uppercase tracking-[0.16em] ${premium ? "text-moss" : "text-forest-500"}`}>
+                    <p className={`text-tiny font-bold uppercase tracking-[0.16em] ${premium ? "text-moss" : "text-forest-500"}`}>
                       Plot {plot.plotNumber}
                     </p>
                     <span
@@ -114,14 +114,14 @@ export default function PlotInventory() {
                     </span>
                   </div>
 
-                  <p className={`mt-2 text-lg font-extrabold leading-tight tracking-tight ${premium ? "text-ivory" : "text-forest-900"}`}>
+                  <p className={`mt-2 text-h3 font-extrabold leading-tight tracking-tight ${premium ? "text-ivory" : "text-forest-900"}`}>
                     {gunta ?? `${plot.areaAcres.toFixed(2)} Acres`}
                   </p>
-                  <p className={`text-[11px] ${premium ? "text-ivory/50" : "text-forest-900/70"}`}>
+                  <p className={`text-tiny ${premium ? "text-ivory/50" : "text-forest-900/70"}`}>
                     {formatAcresApprox(plot.areaAcres)}
                   </p>
 
-                  <dl className={`mt-3 space-y-1 border-t pt-3 text-[13px] ${premium ? "border-white/10" : "border-forest-700/8"}`}>
+                  <dl className={`mt-3 space-y-1 border-t pt-3 text-label ${premium ? "border-white/10" : "border-forest-700/8"}`}>
                     <div className="flex items-center justify-between">
                       <dt className={premium ? "text-ivory/55" : "text-forest-900/70"}>/ Gunta</dt>
                       <dd className={`font-semibold ${premium ? "text-ivory" : "text-forest-900"}`}>
@@ -150,14 +150,14 @@ export default function PlotInventory() {
                           premium,
                         })
                       }
-                      className="btn-green mt-1 w-full !min-h-[42px] !px-3 !py-2 text-xs"
+                      className="btn-green mt-1 w-full !min-h-[42px] !px-3 !py-2 text-tiny"
                     >
                       <WhatsAppIcon width={14} height={14} />
                       I&apos;m Interested
                     </a>
                   ) : (
                     <p
-                      className={`mt-1 rounded-lg py-2.5 text-center text-[11px] font-medium ${
+                      className={`mt-1 rounded-lg py-2.5 text-center text-tiny font-medium ${
                         premium ? "bg-white/5 text-ivory/55" : "bg-forest-700/5 text-forest-900/70"
                       }`}
                     >
@@ -170,7 +170,7 @@ export default function PlotInventory() {
           })}
         </div>
 
-        <p className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-forest-900/70">
+        <p className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-tiny text-forest-900/70">
           <span>{property.pricing.updatedNote}</span>
           {updated && (
             <>

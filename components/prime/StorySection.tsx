@@ -18,7 +18,7 @@ export default function StorySection() {
       <div className="prime-container grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-start lg:gap-14">
         <Reveal>
           <p className="eyebrow mb-4">{s.eyebrow}</p>
-          <h2 className="kannada flex items-start gap-2 text-3xl font-semibold leading-[1.24] text-forest-900 sm:text-[2.6rem]">
+          <h2 className="kannada-h2 flex items-start gap-2 text-forest-900">
             <span>
               {s.headingKannada.map((line, i) => (
                 <span key={i} className="block">
@@ -30,7 +30,7 @@ export default function StorySection() {
           </h2>
 
           {/* Two-column body */}
-          <div className="mt-7 grid grid-cols-1 gap-x-8 gap-y-4 text-[15px] leading-relaxed text-forest-900/75 sm:grid-cols-2">
+          <div className="mt-7 grid grid-cols-1 gap-x-8 gap-y-4 text-body text-forest-900/75 sm:grid-cols-2">
             <div className="space-y-4">
               {colA.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -43,7 +43,7 @@ export default function StorySection() {
             </div>
           </div>
 
-          <p className="accent-script mt-8 text-2xl sm:text-3xl">{s.closing}</p>
+          <p className="accent-script mt-8 text-[1.5rem] sm:text-[1.75rem] font-semibold leading-[1.35]">{s.closing}</p>
         </Reveal>
 
         <Reveal delay={120} className="lg:sticky lg:top-24">

@@ -18,16 +18,16 @@ export default function PlantationSection() {
         {/* Left heading */}
         <Reveal>
           <p className="eyebrow-light mb-4">{p.eyebrow}</p>
-          <h2 className="kannada flex items-center gap-2 text-3xl font-semibold leading-tight sm:text-[2.5rem]">
+          <h2 className="kannada-h2 flex items-center gap-2 text-ivory">
             {p.headingKannada}
             <LeafIcon width={24} height={24} className="flex-none text-moss" />
           </h2>
-          <p className="mt-3 text-lg text-moss">{p.subheading}</p>
+          <p className="mt-3 text-subtitle text-moss">{p.subheading}</p>
         </Reveal>
 
         {/* Right heading */}
         <Reveal delay={80} className="lg:pt-2">
-          <h3 className="text-xl font-bold uppercase leading-tight tracking-wide sm:text-2xl">
+          <h3 className="text-h3 uppercase text-ivory">
             Years of Growth.
             <br />
             <span className="text-moss">Already on the Land.</span>
@@ -53,8 +53,8 @@ export default function PlantationSection() {
                     sizes="(min-width: 1024px) 14vw, 60vw"
                   />
                   <div className="p-3">
-                    <h4 className="text-sm font-bold text-ivory">{crop.name}</h4>
-                    <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-wide text-moss">
+                    <h4 className="text-label font-bold text-ivory">{crop.name}</h4>
+                    <p className="mt-0.5 eyebrow text-moss">
                       {crop.age}
                     </p>
                   </div>
@@ -75,14 +75,14 @@ export default function PlantationSection() {
                     key={t.crop}
                     className="flex items-center gap-4 rounded-xl2 bg-forest-900/60 px-4 py-3 ring-1 ring-white/8"
                   >
-                    <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full border-2 border-moss/60 text-base font-extrabold text-ivory">
+                    <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full border-2 border-moss/60 text-label font-extrabold text-ivory">
                       {number}
                     </span>
                     <span>
-                      <span className="block text-[11px] font-semibold uppercase tracking-wider text-moss">
+                      <span className="block eyebrow text-moss">
                         Years
                       </span>
-                      <span className="block text-base font-semibold text-ivory">{t.crop}</span>
+                      <span className="block text-label font-semibold text-ivory">{t.crop}</span>
                     </span>
                   </li>
                 );
@@ -93,7 +93,7 @@ export default function PlantationSection() {
 
         {/* Closing line — full width */}
         <Reveal delay={120} className="lg:col-span-2">
-          <p className="text-lg leading-relaxed text-ivory/70">
+          <p className="text-body leading-relaxed text-ivory/70">
             {property.timelineClosing.map((line, i) => (
               <span key={i} className={i === property.timelineClosing.length - 1 ? "text-ivory" : ""}>
                 {line}{" "}

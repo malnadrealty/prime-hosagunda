@@ -34,7 +34,7 @@ export default function PrimeHero() {
         <div className="max-w-xl">
           <p className="eyebrow-light mb-5">{property.eyebrow}</p>
 
-          <h1 className="kannada text-[2.15rem] font-semibold leading-[1.18] sm:text-5xl">
+          <h1 className="kannada-h1 text-ivory">
             {property.headlineKannada.map((line, i) => (
               <span key={i} className="block">
                 {line}
@@ -42,7 +42,7 @@ export default function PrimeHero() {
             ))}
           </h1>
 
-          <p className="mt-6 max-w-md text-[20px] font-semibold leading-relaxed text-ivory">
+          <p className="mt-6 max-w-md text-subtitle text-ivory">
             {property.heroSupport}
           </p>
 

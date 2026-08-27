@@ -31,14 +31,14 @@ export default function FinalCTA() {
       <div className="prime-container relative z-10 grid grid-cols-1 items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.2fr_0.8fr]">
         {/* Left — CTA */}
         <Reveal>
-          <h2 className="kannada text-3xl font-bold leading-[1.15] sm:text-4xl">
+          <h2 className="kannada-h2">
             {property.finalCTA.headingKannada?.map((line, i) => (
               <span key={i} className="block">
                 {line}
               </span>
             ))}
           </h2>
-          <div className="mt-5 max-w-lg space-y-2 text-[15px] text-ivory/70">
+          <div className="mt-5 max-w-lg space-y-2 text-body text-ivory/70">
             {property.finalCTA.statements?.map((stmt, i) => (
               <p key={i} className={i === property.finalCTA.statements!.length - 1 ? "text-ivory font-medium" : ""}>
                 {stmt}

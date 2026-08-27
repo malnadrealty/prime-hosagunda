@@ -21,18 +21,18 @@ export default function PricingTrustVideo() {
 
             {/* Question Intro — Secondary Text */}
             {v.introKannada && (
-              <p className="kannada text-lg font-bold leading-relaxed text-forest-900/85 max-w-lg">
+              <p className="kannada-h3 text-forest-900/85 max-w-lg">
                 {Array.isArray(v.introKannada) ? v.introKannada.join(" ") : v.introKannada}
               </p>
             )}
 
             {/* Supporting Detail */}
-            <p className="max-w-xl text-[15px] leading-relaxed text-forest-900/70">{v.detail}</p>
+            <p className="max-w-xl text-body text-forest-900/70">{v.detail}</p>
 
             {/* Closing Statement — Emphasized Box */}
             {v.closingKannada && (
               <div className="rounded-xl bg-gradient-to-r from-forest-50 to-forest-25 border border-forest-200/50 px-5 py-4">
-                <p className="kannada text-[14px] leading-relaxed text-forest-900/80">{v.closingKannada}</p>
+                <p className="kannada text-label leading-relaxed text-forest-900/80">{v.closingKannada}</p>
               </div>
             )}
 
@@ -43,7 +43,7 @@ export default function PricingTrustVideo() {
                   <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-600">
                     <CheckIcon width={14} height={14} />
                   </div>
-                  <span className="text-sm font-medium text-forest-900">100% Legal Titles</span>
+                  <span className="text-label text-forest-900">100% Legal Titles</span>
                 </div>
               )}
               {v.verifiedByMalnadRealty && (
@@ -51,7 +51,7 @@ export default function PricingTrustVideo() {
                   <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-600">
                     <CheckIcon width={14} height={14} />
                   </div>
-                  <span className="text-sm font-medium text-forest-900">Verified by Malnad Realty</span>
+                  <span className="text-label text-forest-900">Verified by Malnad Realty</span>
                 </div>
               )}
             </div>
