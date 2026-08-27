@@ -6,7 +6,7 @@ import type { PropertyConfig, Plot } from "./types";
 // Drop the real photographs into those paths to replace the labeled slots.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const IMG = "properties/hosagunda";
+const IMG = "/properties/hosagunda";
 
 export const hosagunda: PropertyConfig = {
   propertyId: "HOSAGUNDA-PRIME",
