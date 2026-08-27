@@ -39,9 +39,8 @@ export default function PrimeHero() {
         sizes="100vw"
       />
 
-      {/* Tint Overlay for Text Visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-950/85 via-forest-950/50 to-forest-950/92" />
-      <div className="absolute inset-0 bg-gradient-to-r from-forest-950/75 via-transparent to-transparent" />
+      {/* Tint Overlay for Text Visibility (50% balanced) */}
+      <div className="absolute inset-0 bg-forest-950/50" />
 
       <div className="prime-container relative z-10 grid min-h-[calc(92svh-4rem)] grid-cols-1 items-center gap-10 py-10 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Left — messaging */}
