@@ -1,6 +1,7 @@
 "use client";
 
 import Slot from "./ui/Slot";
+import { getAssetPath } from "@/lib/useBasePath";
 import { usePrime } from "./PrimeContext";
 import { track } from "@/lib/analytics";
 import { whatsappUrl } from "@/lib/whatsapp";
@@ -25,7 +26,7 @@ export default function PrimeHero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover lg:hidden"
       >
-        <source src={`/properties/${property.slug}/hero-video.mp4`} type="video/mp4" />
+        <source src={getAssetPath(`/properties/${property.slug}/hero-video.mp4`)} type="video/mp4" />
       </video>
 
       {/* Desktop: Image Background */}
