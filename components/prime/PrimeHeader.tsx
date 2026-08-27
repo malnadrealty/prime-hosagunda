@@ -89,9 +89,9 @@ export default function PrimeHeader() {
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 top-16 z-50 lg:hidden animate-fade-in bg-forest-950/95 backdrop-blur overflow-y-auto">
+        <div className="fixed inset-x-0 top-16 bottom-0 z-[100] lg:hidden animate-fade-in bg-forest-950/95 backdrop-blur overflow-y-auto pointer-events-auto" onClick={() => setMenuOpen(false)}>
           <nav
-            className="flex flex-col gap-1 px-6 py-6"
+            className="flex flex-col gap-1 px-6 py-6 pointer-events-auto"
             aria-label="Mobile"
             onClick={(e) => e.stopPropagation()}
           >
