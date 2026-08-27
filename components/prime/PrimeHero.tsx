@@ -1,5 +1,6 @@
 "use client";
 
+import Slot from "./ui/Slot";
 import { usePrime } from "./PrimeContext";
 import { track } from "@/lib/analytics";
 import { whatsappUrl } from "@/lib/whatsapp";
