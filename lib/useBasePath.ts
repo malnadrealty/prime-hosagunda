@@ -1,12 +1,9 @@
 "use client";
 
 /**
- * With basePath deployment, prepend basePath to asset URLs.
+ * Get asset path - for sketch component, just return the path as-is
+ * Next.js handles public folder assets correctly with basePath
  */
 export function getAssetPath(src: string): string {
-  if (!src || !src.startsWith("/")) return src;
-
-  // For production deployment with basePath /hosagunda
-  // Always prepend it to root-relative paths
-  return `/hosagunda${src}`;
+  return src;
 }

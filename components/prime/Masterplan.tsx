@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { usePrime } from "./PrimeContext";
 import Reveal from "./ui/Reveal";
-import Slot from "./ui/Slot";
 import { track } from "@/lib/analytics";
 import { ExpandIcon, DownloadIcon, CloseIcon } from "./ui/Icons";
 
@@ -50,12 +49,14 @@ export default function Masterplan() {
               aria-label="View the plot sketch full-screen"
               className="group relative block w-full overflow-hidden rounded-xl2 bg-ivory p-2.5 shadow-float ring-1 ring-white/10 transition-transform sm:p-3"
             >
-              <Slot
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={sketch}
                 alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
-                variant="cream"
-                className="rounded-lg"
-                imgClassName="rounded-lg"
+                width={749}
+                height={1058}
+                className="block h-auto w-full rounded-lg"
+                loading="lazy"
               />
               <span className="pointer-events-none absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-forest-950/75 px-3 py-1.5 text-[11px] font-semibold text-ivory backdrop-blur">
                 <ExpandIcon width={13} height={13} /> Tap to zoom
@@ -158,15 +159,12 @@ function SketchViewer({
         className="flex-1 overflow-auto px-3 pb-6"
         style={{ touchAction: "pinch-zoom", WebkitOverflowScrolling: "touch" }}
       >
-        <div className="mx-auto max-w-2xl rounded-lg bg-ivory">
-          <Slot
-            src={src}
-            alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
-            variant="cream"
-            className="rounded-lg"
-            imgClassName="rounded-lg"
-          />
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
+          className="mx-auto block h-auto w-full max-w-2xl rounded-lg bg-ivory"
+        />
         <p className="mx-auto mt-4 max-w-sm text-center text-xs text-ivory/50">
           Pinch to zoom, or download the sketch to view it anytime.
         </p>
