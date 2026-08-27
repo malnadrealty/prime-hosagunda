@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, type ReactNode } from "react";
+import { useRef, useState, useEffect, type ReactNode } from "react";
 import { getAssetPath } from "@/lib/useBasePath";
 import Reveal from "./ui/Reveal";
 
@@ -12,6 +12,17 @@ export type GalleryImage = {
 
 export default function FarmlandGallery({ images }: { images: GalleryImage[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedImage(null);
+    };
+    if (selectedImage) {
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [selectedImage]);
 
   return (
     <section id="gallery" className="scroll-mt-16 bg-cream py-16 sm:py-24">
@@ -35,7 +46,11 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
                 key={image.src}
                 className="snap-start w-[70vw] flex-none sm:w-[45vw]"
               >
-                <GalleryCard image={image} index={index} />
+                <GalleryCard
+                  image={image}
+                  index={index}
+                  onImageClick={() => setSelectedImage(image)}
+                />
               </div>
             ))}
           </div>
@@ -45,11 +60,50 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
         <Reveal delay={80} className="mt-8">
           <div className="hidden grid-cols-2 gap-4 lg:grid lg:grid-cols-3">
             {images.map((image, index) => (
-              <GalleryCard key={image.src} image={image} index={index} />
+              <GalleryCard
+                key={image.src}
+                image={image}
+                index={index}
+                onImageClick={() => setSelectedImage(image)}
+              />
             ))}
           </div>
         </Reveal>
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-forest-950/90 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="relative max-h-[90vh] max-w-4xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              aria-label="Close lightbox"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image Container */}
+            <div className="relative w-full overflow-hidden rounded-lg bg-black">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={getAssetPath(selectedImage.src)}
+                alt={selectedImage.alt}
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -57,13 +111,18 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
 function GalleryCard({
   image,
   index,
+  onImageClick,
 }: {
   image: GalleryImage;
   index: number;
+  onImageClick: () => void;
 }) {
   return (
     <Reveal delay={index * 40}>
-      <div className="group relative overflow-hidden rounded-xl2 shadow-card">
+      <button
+        onClick={onImageClick}
+        className="group relative w-full overflow-hidden rounded-xl2 shadow-card cursor-pointer transition-transform hover:scale-105"
+      >
         {/* Fixed 4:5 aspect ratio container */}
         <div className="relative w-full overflow-hidden bg-forest-100" style={{ aspectRatio: "4/5" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -81,7 +140,7 @@ function GalleryCard({
             <p className="eyebrow text-ivory">{image.caption}</p>
           </div>
         )}
-      </div>
+      </button>
     </Reveal>
   );
 }
