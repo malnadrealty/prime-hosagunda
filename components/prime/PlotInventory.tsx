@@ -84,7 +84,15 @@ export default function PlotInventory() {
 
             // Status-based colors: Available (white), Booked (blue), Reserved (orange), Sold (gray)
             const statusBgClass = premium
-              ? "border-forest-500/40 bg-forest-900 text-ivory ring-1 ring-forest-500/30"
+              ? available
+                ? "border-forest-500/40 bg-forest-900 text-ivory ring-2 ring-moss/50"
+                : booked
+                  ? "border-blue-500/40 bg-forest-900 text-ivory ring-2 ring-blue-500/50"
+                  : reserved
+                    ? "border-orange-500/40 bg-forest-900 text-ivory ring-2 ring-orange-500/50"
+                    : sold
+                      ? "border-gray-500/40 bg-forest-900 text-ivory ring-2 ring-gray-500/50"
+                      : "border-forest-500/40 bg-forest-900 text-ivory ring-1 ring-forest-500/30"
               : available
                 ? "border-blue-200/40 bg-white"
                 : booked
