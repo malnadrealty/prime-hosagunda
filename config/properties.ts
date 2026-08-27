@@ -134,7 +134,7 @@ export const hosagunda: PropertyConfig = {
     borewellLabel: "BOREWELL POINTS",
     tableLabel: "14 ಎಕರೆ ಜಮೀನಿನಾದ್ಯಂತ",
     extentLabel: "",
-    image: `${IMG}/water.jpg`,
+    image: `${IMG}/Water.webp`,
     imageLabel: "PLANTATION WATER POINT",
   },
 
