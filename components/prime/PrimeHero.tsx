@@ -4,7 +4,7 @@ import Slot from "./ui/Slot";
 import { usePrime } from "./PrimeContext";
 import { track } from "@/lib/analytics";
 import { whatsappUrl } from "@/lib/whatsapp";
-import { LeafIcon, ArrowRightIcon, WhatsAppIcon } from "./ui/Icons";
+import { LeafIcon, PlayIcon, ArrowRightIcon, WhatsAppIcon } from "./ui/Icons";
 
 const CROPS = ["Areca", "Coffee", "Rubber", "Coconut", "Pepper"];
 
@@ -89,8 +89,31 @@ export default function PrimeHero() {
           </div>
         </div>
 
-        {/* Right — stat panel (desktop-weighted) */}
+        {/* Right — video card + stat panel (desktop-weighted) */}
         <div className="flex flex-col gap-4">
+          <button
+            type="button"
+            onClick={() => scrollTo("video")}
+            className="group relative block aspect-video w-full overflow-hidden rounded-xl2 ring-1 ring-white/15"
+            aria-label="Watch property video"
+          >
+            <Slot
+              src={`/properties/${property.slug}/video-poster.jpg`}
+              alt="Property video poster"
+              label="PROPERTY VIDEO"
+              className="absolute inset-0 h-full w-full"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
+            <span className="absolute inset-0 bg-forest-950/25 transition-colors group-hover:bg-forest-950/10" />
+            <span className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ivory/95 text-forest-700 shadow-float">
+                <PlayIcon width={22} height={22} className="ml-0.5" />
+              </span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ivory">
+                Watch Property Video
+              </span>
+            </span>
+          </button>
 
           <div className="hidden grid-cols-3 gap-2.5 rounded-xl2 bg-forest-900/70 p-4 ring-1 ring-white/10 backdrop-blur-sm lg:grid">
             {property.stats.map((s) => (
