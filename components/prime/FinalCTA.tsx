@@ -28,7 +28,7 @@ export default function FinalCTA() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-forest-950/95 via-forest-950/85 to-forest-950/95" />
 
-      <div className="prime-container relative z-10 grid grid-cols-1 items-center gap-10 py-16 sm:py-20 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="prime-container relative z-10 grid grid-cols-1 items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.2fr_0.8fr]">
         {/* Left — CTA */}
         <Reveal>
           <h2 className="kannada text-3xl font-bold leading-[1.15] sm:text-4xl">
