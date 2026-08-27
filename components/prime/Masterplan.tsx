@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePrime } from "./PrimeContext";
 import Reveal from "./ui/Reveal";
+import Slot from "./ui/Slot";
 import { track } from "@/lib/analytics";
 import { ExpandIcon, DownloadIcon, CloseIcon } from "./ui/Icons";
 
@@ -13,7 +14,6 @@ export default function Masterplan() {
   const sketch = `/properties/${property.slug}/hosagunda-sketch.jpeg`;
   const downloadName = "Hosagunda-Plot-Sketch.jpg";
   const [zoom, setZoom] = useState(false);
-  const [failed, setFailed] = useState(false);
 
   const openZoom = () => {
     setZoom(true);
@@ -50,19 +50,13 @@ export default function Masterplan() {
               aria-label="View the plot sketch full-screen"
               className="group relative block w-full overflow-hidden rounded-xl2 bg-ivory p-2.5 shadow-float ring-1 ring-white/10 transition-transform sm:p-3"
             >
-              {failed ? (
-                <SketchPlaceholder />
-              ) : (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={sketch}
-                  alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
-                  width={749}
-                  height={1058}
-                  onError={() => setFailed(true)}
-                  className="block h-auto w-full rounded-lg"
-                />
-              )}
+              <Slot
+                src={sketch}
+                alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
+                variant="cream"
+                className="rounded-lg"
+                imgClassName="rounded-lg"
+              />
               <span className="pointer-events-none absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-forest-950/75 px-3 py-1.5 text-[11px] font-semibold text-ivory backdrop-blur">
                 <ExpandIcon width={13} height={13} /> Tap to zoom
               </span>
