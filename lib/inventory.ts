@@ -22,7 +22,7 @@ import { seedInventory } from "@/config/properties";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const GUNTA_PER_ACRE = 40;
-const VALID_STATUSES: PlotStatus[] = ["AVAILABLE", "BOOKED", "HOLD", "SOLD"];
+const VALID_STATUSES: PlotStatus[] = ["AVAILABLE", "BOOKED", "RESERVED", "SOLD"];
 
 function revalidateSeconds(): number {
   const n = Number(process.env.INVENTORY_REVALIDATE_SECONDS);
@@ -43,7 +43,7 @@ function normalizeStatus(v: unknown): PlotStatus {
   const s = String(v ?? "").trim().toUpperCase();
   if (s.startsWith("AVAIL")) return "AVAILABLE";
   if (s.startsWith("BOOK")) return "BOOKED";
-  if (s.startsWith("HOLD") || s.startsWith("RESERV")) return "HOLD";
+  if (s.startsWith("RESERV") || s.startsWith("HOLD")) return "RESERVED";
   if (s.startsWith("SOLD")) return "SOLD";
   return (VALID_STATUSES as string[]).includes(s) ? (s as PlotStatus) : "AVAILABLE";
 }

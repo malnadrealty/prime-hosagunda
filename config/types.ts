@@ -4,7 +4,7 @@
 // same components by swapping data only.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type PlotStatus = "AVAILABLE" | "BOOKED" | "HOLD" | "SOLD";
+export type PlotStatus = "AVAILABLE" | "BOOKED" | "RESERVED" | "SOLD";
 
 /** A single parcel. Mirrors the Google Sheet row shape. */
 export type Plot = {
