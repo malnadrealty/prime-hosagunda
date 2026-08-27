@@ -42,7 +42,7 @@ export default function PrimeHero() {
             ))}
           </h1>
 
-          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ivory/85">
+          <p className="mt-6 max-w-md text-[20px] font-semibold leading-relaxed text-ivory">
             {property.heroSupport}
           </p>
 
