@@ -204,10 +204,10 @@ export const hosagunda: PropertyConfig = {
     subtitle: ["NO RENDERS.", "NO ARTIFICIAL VIEWS."],
     supporting: "ಈ ಫೋಟೋಗಳು ಇದೇ ಜಮೀನಿನಲ್ಲಿ ತೆಗೆದವು.",
     items: [
-      { src: `${IMG}/gallery/farmland-01.jpg`, alt: "Farmland at Hosagunda - Area 1" },
-      { src: `${IMG}/gallery/farmland-02.jpg`, alt: "Farmland at Hosagunda - Area 2" },
-      { src: `${IMG}/gallery/farmland-03.jpg`, alt: "Farmland at Hosagunda - Area 3" },
-      { src: `${IMG}/gallery/farmland-04.jpg`, alt: "Farmland at Hosagunda - Area 4" },
+      { src: `${IMG}/gallery/farmland-01.jpg`, alt: "Farmland at Hosagunda - Area 1", caption: "Area 1", category: "LAND" },
+      { src: `${IMG}/gallery/farmland-02.jpg`, alt: "Farmland at Hosagunda - Area 2", caption: "Area 2", category: "LAND" },
+      { src: `${IMG}/gallery/farmland-03.jpg`, alt: "Farmland at Hosagunda - Area 3", caption: "Area 3", category: "LAND" },
+      { src: `${IMG}/gallery/farmland-04.jpg`, alt: "Farmland at Hosagunda - Area 4", caption: "Area 4", category: "LAND" },
     ],
   },
 
