@@ -76,18 +76,41 @@ export default function PlotInventory() {
         <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {plots.map((plot, i) => {
             const available = plot.status === "AVAILABLE";
+            const booked = plot.status === "BOOKED";
+            const reserved = plot.status === "HOLD" || plot.status === "RESERVED";
+            const sold = plot.status === "SOLD";
             const premium = property.premiumPlots?.includes(plot.plotNumber) ?? false;
             const gunta = formatGunta(plot.areaGunta);
+
+            // Status-based colors: Available (white), Booked (blue), Reserved (orange), Sold (gray)
+            const statusBgClass = premium
+              ? "border-forest-500/40 bg-forest-900 text-ivory ring-1 ring-forest-500/30"
+              : available
+                ? "border-blue-200/40 bg-white"
+                : booked
+                  ? "border-blue-300/50 bg-blue-50"
+                  : reserved
+                    ? "border-orange-300/50 bg-orange-50"
+                    : sold
+                      ? "border-gray-300/50 bg-gray-50"
+                      : "border-forest-700/10 bg-white";
+
+            const statusTextClass = premium
+              ? "text-forest-500"
+              : available
+                ? "text-forest-500"
+                : booked
+                  ? "text-blue-600"
+                  : reserved
+                    ? "text-orange-600"
+                    : sold
+                      ? "text-gray-600"
+                      : "text-forest-500";
+
             return (
               <Reveal key={plot.plotNumber} delay={(i % 6) * 40}>
                 <article
-                  className={`relative flex h-full flex-col rounded-xl2 border p-4 shadow-card transition-shadow hover:shadow-float ${
-                    premium
-                      ? "border-forest-500/40 bg-forest-900 text-ivory ring-1 ring-forest-500/30"
-                      : available
-                        ? "border-forest-700/10 bg-white"
-                        : "border-black/10 bg-black/[0.02]"
-                  }`}
+                  className={`relative flex h-full flex-col rounded-xl2 border p-4 shadow-card transition-shadow hover:shadow-float ${statusBgClass}`}
                 >
                   {premium && (
                     <span className="absolute -top-2.5 left-4 inline-flex items-center gap-1 rounded-full bg-brand-red px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-white shadow-sm">
@@ -97,17 +120,25 @@ export default function PlotInventory() {
                   )}
 
                   <div className={`flex items-center justify-between ${premium ? "mt-1.5" : ""}`}>
-                    <p className={`text-tiny font-bold uppercase tracking-[0.16em] ${premium ? "text-moss" : "text-forest-500"}`}>
+                    <p className={`text-tiny font-bold uppercase tracking-[0.16em] ${premium ? "text-moss" : statusTextClass}`}>
                       Plot {plot.plotNumber}
                     </p>
                     <span
-                      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider ${
-                        available ? (premium ? "text-moss" : "text-forest-500") : premium ? "text-ivory/50" : "text-[#6b6b6b]"
-                      }`}
+                      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider ${premium ? "text-ivory/50" : statusTextClass}`}
                     >
                       <span
                         className={`h-1.5 w-1.5 rounded-full ${
-                          available ? (premium ? "bg-moss" : "bg-forest-500") : "bg-[#8f8f8f]"
+                          premium
+                            ? "bg-moss"
+                            : available
+                              ? "bg-blue-500"
+                              : booked
+                                ? "bg-blue-500"
+                                : reserved
+                                  ? "bg-orange-500"
+                                  : sold
+                                    ? "bg-gray-500"
+                                    : "bg-forest-500"
                         }`}
                       />
                       {plot.status}
@@ -121,7 +152,17 @@ export default function PlotInventory() {
                     {formatAcresApprox(plot.areaAcres)}
                   </p>
 
-                  <dl className={`mt-3 space-y-1 border-t pt-3 text-label ${premium ? "border-white/10" : "border-forest-700/8"}`}>
+                  <dl className={`mt-3 space-y-1 border-t pt-3 text-label ${
+                    premium
+                      ? "border-white/10"
+                      : booked
+                        ? "border-blue-200/50"
+                        : reserved
+                          ? "border-orange-200/50"
+                          : sold
+                            ? "border-gray-200/50"
+                            : "border-forest-700/8"
+                  }`}>
                     <div className="flex items-center justify-between">
                       <dt className={premium ? "text-ivory/55" : "text-forest-900/70"}>/ Gunta</dt>
                       <dd className={`font-semibold ${premium ? "text-ivory" : "text-forest-900"}`}>

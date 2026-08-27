@@ -230,7 +230,7 @@ function todayISO(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
-/** Statuses shown publicly. HOLD/SOLD collapse to BOOKED for the buyer view. */
-export function publicStatus(status: PlotStatus): "AVAILABLE" | "BOOKED" {
-  return status === "AVAILABLE" ? "AVAILABLE" : "BOOKED";
+/** Statuses shown publicly with full distinction for UI coloring. */
+export function publicStatus(status: PlotStatus): PlotStatus {
+  return status;
 }
