@@ -34,7 +34,7 @@ export default function PricingTrustVideo() {
             )}
 
             {/* Main Headline — Primary Focus */}
-            <h2 className="text-4xl font-bold leading-tight tracking-tight text-forest-950 sm:text-5xl">
+            <h2 className="text-4xl font-bold leading-tight tracking-tight text-forest-950 sm:text-5xl lg:text-5xl">
               {v.headline.map((line, i) => (
                 <span key={i} className="block">
                   {line}
