@@ -43,7 +43,7 @@ export default function PlantationSection() {
                 delay={i * 50}
                 className="snap-start w-[60vw] flex-none sm:w-[38vw] lg:w-auto"
               >
-                <article className="group h-full overflow-hidden rounded-xl2 bg-forest-900 ring-1 ring-white/8">
+                <article className="group h-full overflow-hidden rounded-xl2 shadow-card">
                   <Slot
                     src={crop.image}
                     alt={crop.alt}
