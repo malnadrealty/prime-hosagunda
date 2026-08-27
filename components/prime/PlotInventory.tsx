@@ -168,7 +168,7 @@ export default function PlotInventory() {
                             : "border-forest-700/8"
                   }`}>
                     <div className="flex items-center justify-between">
-                      <dt className={premium ? (available || booked ? "text-forest-900/70" : "text-ivory/55") : "text-forest-900/70"}>/ Gunta</dt>
+                      <dt className={premium ? (available || booked ? "text-forest-900/70" : "text-ivory/55") : "text-forest-900/70"}>Per Gunta</dt>
                       <dd className={`font-semibold ${premium ? (available || booked ? "text-forest-900" : "text-ivory") : "text-forest-900"}`}>
                         {formatRupees(plot.pricePerGunta)}
                       </dd>
