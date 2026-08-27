@@ -36,7 +36,7 @@ export default function PlotDetail({
       {premium && (
         <span className="mb-3 inline-flex items-center gap-1 rounded-full bg-brand-red px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
           <StarIcon width={11} height={11} />
-          {property.premiumLabel ?? "PRIME"} Parcel
+          {property.premiumLabel ?? "PRIME"} Plot
         </span>
       )}
       <div className="flex items-start justify-between gap-3">

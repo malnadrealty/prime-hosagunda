@@ -45,7 +45,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Malnad Realty PRIME. All rights reserved.</p>
-          <p>14 Acres · 6 Parcels · One Established Plantation</p>
+          <p>14 Acres · 6 Plots · One Established Plantation</p>
         </div>
       </div>
     </footer>

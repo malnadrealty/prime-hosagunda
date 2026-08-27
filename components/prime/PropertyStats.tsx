@@ -17,7 +17,7 @@ export default function PropertyStats() {
             id="glance-heading"
             className="text-[1.7rem] font-bold leading-[1.15] tracking-tight text-forest-900"
           >
-            14 Acres. 6 Parcels.
+            14 Acres. 6 Plots.
             <br />
             <span className="text-forest-600">One Established Plantation.</span>
           </h2>

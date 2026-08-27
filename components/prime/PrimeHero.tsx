@@ -21,7 +21,7 @@ export default function PrimeHero() {
       <Slot
         src={`/properties/${property.slug}/hero.jpg`}
         alt="Established plantation at Hosagunda, Sagara Taluk"
-        label="PLANTATION HERO IMAGE"
+        label=""
         eager
         className="absolute inset-0 h-full w-full"
         sizes="100vw"
@@ -43,11 +43,8 @@ export default function PrimeHero() {
           </h1>
 
           <div className="mt-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-moss">
-              A Living Plantation.
-            </p>
-            <p className="mt-1 text-2xl font-bold tracking-tight text-ivory sm:text-3xl">
-              6 Private Parcels.
+            <p className="text-2xl font-bold tracking-tight text-ivory sm:text-3xl">
+              6 Plots.
             </p>
           </div>
 

@@ -89,7 +89,7 @@ export default function PrimeHeader() {
       {menuOpen && (
         <div className="lg:hidden">
           <div
-            className="fixed inset-0 top-16 z-40 animate-fade-in bg-forest-950/95 backdrop-blur"
+            className="fixed inset-0 top-16 z-50 animate-fade-in bg-forest-950/95 backdrop-blur"
             onClick={() => setMenuOpen(false)}
           >
             <nav
