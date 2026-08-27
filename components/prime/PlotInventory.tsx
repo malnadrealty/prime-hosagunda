@@ -83,25 +83,21 @@ export default function PlotInventory() {
             const gunta = formatGunta(plot.areaGunta);
 
             // Status-based colors: Available (white), Booked (blue), Reserved (orange), Sold (gray)
-            const statusBgClass = premium
-              ? available
-                ? "border-2 border-moss bg-forest-900 text-ivory"
-                : booked
-                  ? "border-2 border-blue-500 bg-forest-900 text-ivory"
-                  : reserved
-                    ? "border-2 border-orange-500 bg-forest-900 text-ivory"
-                    : sold
-                      ? "border-2 border-gray-500 bg-forest-900 text-ivory"
-                      : "border-forest-500/40 bg-forest-900 text-ivory"
-              : available
-                ? "border-blue-200/40 bg-white"
-                : booked
-                  ? "border-blue-300/50 bg-blue-50"
-                  : reserved
-                    ? "border-orange-300/50 bg-orange-50"
-                    : sold
-                      ? "border-gray-300/50 bg-gray-50"
-                      : "border-forest-700/10 bg-white";
+            const statusBgClass = available
+              ? "border-blue-200/40 bg-white"
+              : booked
+                ? premium
+                  ? "border-blue-300/50 bg-blue-950 text-ivory"
+                  : "border-blue-300/50 bg-blue-50"
+                : reserved
+                  ? premium
+                    ? "border-orange-300/50 bg-orange-950 text-ivory"
+                    : "border-orange-300/50 bg-orange-50"
+                  : sold
+                    ? premium
+                      ? "border-gray-300/50 bg-gray-950 text-ivory"
+                      : "border-gray-300/50 bg-gray-50"
+                    : "border-forest-700/10 bg-white";
 
             const statusTextClass = premium
               ? "text-forest-500"
