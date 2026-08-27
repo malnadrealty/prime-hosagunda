@@ -223,7 +223,7 @@ export const hosagunda: PropertyConfig = {
   },
 
   finalCTA: {
-    headingKannada: ["ಫೋಟೋದಲ್ಲಿ ನೋಡಿದಿರಿ.", "ಈಗ ಪ್ಲಾಟಕ್ಕೆ ಬಂದು ನೋಡಿ."],
+    headingKannada: ["ಫೋಟೋದಲ್ಲಿ ನೋಡಿದಿರಿ.", "ಈಗ ಪ್ಲಾಟ್ ಗೆ ಬಂದು ನೋಡಿ."],
     statements: [
       "ತೋಟವನ್ನು ನೋಡಿ.",
       "ಮಣ್ಣನ್ನು ಕೈಯಲ್ಲಿ ಹಿಡಿದು ನೋಡಿ.",
