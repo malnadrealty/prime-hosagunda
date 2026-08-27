@@ -77,7 +77,7 @@ export default function PlotInventory() {
           {plots.map((plot, i) => {
             const available = plot.status === "AVAILABLE";
             const booked = plot.status === "BOOKED";
-            const reserved = plot.status === "HOLD" || plot.status === "RESERVED";
+            const reserved = plot.status === "HOLD";
             const sold = plot.status === "SOLD";
             const premium = property.premiumPlots?.includes(plot.plotNumber) ?? false;
             const gunta = formatGunta(plot.areaGunta);
