@@ -15,38 +15,63 @@ export default function PricingTrustVideo() {
       <div className="prime-container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Trust */}
         <Reveal>
-          <p className="eyebrow mb-4">TRUST &amp; VERIFICATION</p>
-          {v.introKannada && (
-            <p className="kannada mb-4 text-lg font-semibold text-forest-900">
-              {Array.isArray(v.introKannada) ? v.introKannada.join(" ") : v.introKannada}
-            </p>
-          )}
-          <span className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-forest-500/10 text-forest-600 ring-1 ring-forest-500/20">
-            <ShieldCheckIcon width={32} height={32} />
-          </span>
-          <h2 className="text-3xl font-bold leading-[1.14] tracking-tight text-forest-900 sm:text-4xl">
-            {v.headline.map((line, i) => (
-              <span key={i} className="block">
-                {line}
-              </span>
-            ))}
-          </h2>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-forest-900/70">{v.detail}</p>
-          {v.closingKannada && (
-            <p className="kannada mt-4 max-w-md text-sm text-forest-900/75">{v.closingKannada}</p>
-          )}
-          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
-            {v.legalTitle && (
-              <li className="inline-flex items-center gap-2 text-sm font-medium text-forest-600">
-                <CheckIcon width={16} height={16} /> 100% Legal Titles
-              </li>
+          <div className="space-y-6">
+            {/* Eyebrow */}
+            <p className="eyebrow text-red-600">TRUST &amp; VERIFICATION</p>
+
+            {/* Shield Icon — Large and Prominent */}
+            <div className="inline-flex">
+              <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-forest-500/15 to-forest-400/5 text-forest-600 ring-1 ring-forest-500/25 shadow-sm">
+                <ShieldCheckIcon width={48} height={48} />
+              </div>
+            </div>
+
+            {/* Question Intro — Secondary Text */}
+            {v.introKannada && (
+              <p className="kannada text-base font-medium leading-relaxed text-forest-900/80 max-w-lg">
+                {Array.isArray(v.introKannada) ? v.introKannada.join(" ") : v.introKannada}
+              </p>
             )}
-            {v.verifiedByMalnadRealty && (
-              <li className="inline-flex items-center gap-2 text-sm font-medium text-forest-600">
-                <CheckIcon width={16} height={16} /> Verified by Malnad Realty
-              </li>
+
+            {/* Main Headline — Primary Focus */}
+            <h2 className="text-4xl font-bold leading-tight tracking-tight text-forest-950 sm:text-5xl">
+              {v.headline.map((line, i) => (
+                <span key={i} className="block">
+                  {line}
+                </span>
+              ))}
+            </h2>
+
+            {/* Supporting Detail */}
+            <p className="max-w-xl text-[15px] leading-relaxed text-forest-900/70">{v.detail}</p>
+
+            {/* Closing Statement — Emphasized Box */}
+            {v.closingKannada && (
+              <div className="rounded-xl bg-gradient-to-r from-forest-50 to-forest-25 border border-forest-200/50 px-5 py-4">
+                <p className="kannada text-[14px] leading-relaxed text-forest-900/80">{v.closingKannada}</p>
+              </div>
             )}
-          </ul>
+
+            {/* Trust Verification Badges */}
+            <div className="space-y-3 pt-2">
+              {v.legalTitle && (
+                <div className="flex items-center gap-3">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-600">
+                    <CheckIcon width={14} height={14} />
+                  </div>
+                  <span className="text-sm font-medium text-forest-900">100% Legal Titles</span>
+                </div>
+              )}
+              {v.verifiedByMalnadRealty && (
+                <div className="flex items-center gap-3">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-600">
+                    <CheckIcon width={14} height={14} />
+                  </div>
+                  <span className="text-sm font-medium text-forest-900">Verified by Malnad Realty</span>
+                </div>
+              )}
+            </div>
+          </div>
         </Reveal>
 
         {/* Video */}
