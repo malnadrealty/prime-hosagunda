@@ -39,7 +39,20 @@ export default async function Home() {
     return <div>Property not found</div>;
   }
 
-  const inventory: PublicInventory = await getInventory(property).then(publicStatus);
+  const inventory = await getInventory(property.propertyId);
 
-  return <PropertyPage property={property} inventory={inventory} />;
+  const publicInventory: PublicInventory = {
+    plots: inventory.plots.map((p) => ({
+      plotNumber: p.plotNumber,
+      areaAcres: p.areaAcres,
+      areaGunta: p.areaGunta,
+      pricePerGunta: p.pricePerGunta,
+      totalPrice: p.totalPrice,
+      status: publicStatus(p.status),
+    })),
+    lastUpdated: inventory.lastUpdated,
+    source: inventory.source,
+  };
+
+  return <PropertyPage property={property} inventory={publicInventory} />;
 }
