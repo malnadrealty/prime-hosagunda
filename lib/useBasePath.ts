@@ -7,14 +7,7 @@
 export function getAssetPath(src: string): string {
   if (!src || !src.startsWith("/")) return src;
 
-  // Check if we're in a basePath deployment by looking at window location
-  if (typeof window === "undefined") return src;
-
-  const pathname = window.location.pathname;
-  // If pathname includes /hosagunda, we're in basePath mode
-  if (pathname.includes("/hosagunda")) {
-    return `/hosagunda${src}`;
-  }
-
-  return src;
+  // Always prepend /hosagunda for root-relative paths
+  // This is safe because with basePath, the app is served at /hosagunda
+  return `/hosagunda${src}`;
 }
