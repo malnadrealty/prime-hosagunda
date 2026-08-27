@@ -28,7 +28,7 @@ export default function PricingTrustVideo() {
 
             {/* Question Intro — Secondary Text */}
             {v.introKannada && (
-              <p className="kannada text-base font-medium leading-relaxed text-forest-900/80 max-w-lg">
+              <p className="kannada text-lg font-bold leading-relaxed text-forest-900/85 max-w-lg">
                 {Array.isArray(v.introKannada) ? v.introKannada.join(" ") : v.introKannada}
               </p>
             )}
