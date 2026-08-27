@@ -203,7 +203,7 @@ export default function PlotInventory() {
                   ) : (
                     <p
                       className={`mt-1 rounded-lg py-2.5 text-center text-tiny font-medium ${
-                        premium ? "bg-white/5 text-ivory/55" : "bg-forest-700/5 text-forest-900/70"
+                        premium ? (available || booked ? "bg-blue-100/30 text-forest-900" : "bg-white/5 text-ivory/55") : "bg-forest-700/5 text-forest-900/70"
                       }`}
                     >
                       {plot.status}
