@@ -33,15 +33,6 @@ export default function PricingTrustVideo() {
               </p>
             )}
 
-            {/* Main Headline — Primary Focus */}
-            <h2 className="text-4xl font-bold leading-tight tracking-tight text-forest-950 sm:text-5xl lg:text-5xl">
-              {v.headline.map((line, i) => (
-                <span key={i} className="block">
-                  {line}
-                </span>
-              ))}
-            </h2>
-
             {/* Supporting Detail */}
             <p className="max-w-xl text-[15px] leading-relaxed text-forest-900/70">{v.detail}</p>
 
