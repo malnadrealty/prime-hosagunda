@@ -158,12 +158,15 @@ function SketchViewer({
         className="flex-1 overflow-auto px-3 pb-6"
         style={{ touchAction: "pinch-zoom", WebkitOverflowScrolling: "touch" }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={src}
-          alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
-          className="mx-auto block h-auto w-full max-w-2xl rounded-lg bg-ivory"
-        />
+        <div className="mx-auto max-w-2xl rounded-lg bg-ivory">
+          <Slot
+            src={src}
+            alt="Hosagunda Farm Land — plot sketch showing all 6 parcels, sizes, roads and boundaries"
+            variant="cream"
+            className="rounded-lg"
+            imgClassName="rounded-lg"
+          />
+        </div>
         <p className="mx-auto mt-4 max-w-sm text-center text-xs text-ivory/50">
           Pinch to zoom, or download the sketch to view it anytime.
         </p>
