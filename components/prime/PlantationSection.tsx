@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState, useEffect } from "react";
 import { usePrime } from "./PrimeContext";
 import Slot from "./ui/Slot";
 import Reveal from "./ui/Reveal";
@@ -8,6 +9,49 @@ import { LeafIcon } from "./ui/Icons";
 export default function PlantationSection() {
   const { property } = usePrime();
   const p = property.plantation;
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasScrolled && scrollRef.current) {
+          setHasScrolled(true);
+          triggerAutoScroll();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (scrollRef.current) {
+      observer.observe(scrollRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasScrolled]);
+
+  const triggerAutoScroll = () => {
+    if (!scrollRef.current) return;
+
+    const element = scrollRef.current;
+    const scrollAmount = 250;
+    let scrollDirection = 1;
+    let cycles = 0;
+
+    const autoScroll = setInterval(() => {
+      element.scrollLeft += scrollAmount * scrollDirection;
+      cycles++;
+
+      if (cycles >= 2) {
+        scrollDirection *= -1;
+        cycles = 0;
+      }
+
+      if (element.scrollLeft === 0) {
+        clearInterval(autoScroll);
+      }
+    }, 700);
+  };
 
   return (
     <section
@@ -36,7 +80,10 @@ export default function PlantationSection() {
 
         {/* Left — 5 crop cards */}
         <div className="lg:col-start-1 lg:row-start-2">
-          <div className="no-scrollbar snap-x-mandatory -mx-5 flex gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-5 lg:overflow-visible">
+          <div
+            ref={scrollRef}
+            className="no-scrollbar snap-x-mandatory -mx-5 flex gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-5 lg:overflow-visible"
+          >
             {property.crops.map((crop, i) => (
               <Reveal
                 key={crop.key}
