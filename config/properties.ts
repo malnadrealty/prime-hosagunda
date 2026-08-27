@@ -39,7 +39,7 @@ export const hosagunda: PropertyConfig = {
       nameKannada: "ಅಡಿಕೆ",
       age: "3 ವರ್ಷಗಳ ಬೆಳವಣಿಗೆ",
       descriptor: "Growing arecanut plantation.",
-      image: `${IMG}/crops/arecanut.jpg`,
+      image: `${IMG}/plantation-cards/Arecanut.jpg`,
       alt: "Arecanut palms growing in the Hosagunda plantation",
     },
     {
@@ -48,7 +48,7 @@ export const hosagunda: PropertyConfig = {
       nameKannada: "ಕಾಫಿ",
       age: "2 ವರ್ಷಗಳ ಬೆಳವಣಿಗೆ",
       descriptor: "Young coffee plants already growing.",
-      image: `${IMG}/crops/coffee.jpg`,
+      image: `${IMG}/plantation-cards/Coffee.jpg`,
       alt: "Coffee plants with ripening berries at Hosagunda",
     },
     {
@@ -57,7 +57,7 @@ export const hosagunda: PropertyConfig = {
       nameKannada: "ರಬ್ಬರ್",
       age: "20 ವರ್ಷಗಳ ಹಳೆಯ ತೋಟ",
       descriptor: "Established rubber plantation.",
-      image: `${IMG}/crops/rubber.jpg`,
+      image: `${IMG}/plantation-cards/Rubber.jpg`,
       alt: "Mature rubber trees being tapped at Hosagunda",
     },
     {
@@ -66,7 +66,7 @@ export const hosagunda: PropertyConfig = {
       nameKannada: "ಕಾಳುಮೆಣಸು",
       age: "3 ವರ್ಷಗಳ ಬೆಳವಣಿಗೆ",
       descriptor: "Pepper growing in the plantation.",
-      image: `${IMG}/crops/pepper.jpg`,
+      image: `${IMG}/plantation-cards/pepper.jpg`,
       alt: "Pepper vines climbing support trees at Hosagunda",
     },
     {
@@ -75,7 +75,7 @@ export const hosagunda: PropertyConfig = {
       nameKannada: "ತೆಂಗು",
       age: "ಈಗಾಗಲೇ ಇರುವ ತೋಟ",
       descriptor: "Coconut trees already form part of the green landscape.",
-      image: `${IMG}/crops/coconut.jpg`,
+      image: `${IMG}/plantation-cards/Coconut.jpg`,
       alt: "Coconut palms across the Hosagunda plantation",
     },
   ],
