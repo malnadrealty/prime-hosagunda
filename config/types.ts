@@ -208,9 +208,10 @@ export type PropertyConfig = {
   verification: {
     legalTitle: boolean;
     verifiedByMalnadRealty: boolean;
+    introKannada?: string | string[];
     headline: string[];
-    support: string;
     detail: string;
+    closingKannada?: string;
   };
 
   gallery: {

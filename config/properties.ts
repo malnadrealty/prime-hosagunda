@@ -192,10 +192,11 @@ export const hosagunda: PropertyConfig = {
   verification: {
     legalTitle: true,
     verifiedByMalnadRealty: true,
+    introKannada: ["ಜಮೀನು ಕೊಳ್ಳುವಾಗ", "ಮೊದಲ ಪ್ರಶ್ನೆ - ದಾಖಲೆಗಳು ಸರಿಯಾಗಿವೆಯೇ?"],
     headline: ["100% LEGAL TITLES", "Verified by Malnad Realty"],
-    support: "ನಿಮ್ಮ ನಿರ್ಧಾರಕ್ಕೆ ಬೇಕಾದ ಮೂಲ ಮಾಹಿತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ನೀಡುವುದು ನಮ್ಮ ಜವಾಬ್ದಾರಿ.",
     detail:
       "Property details and ownership documents have been verified by Malnad Realty.",
+    closingKannada: "ನಿಮ್ಮ ನಿರ್ಧಾರಕ್ಕೆ ಬೇಕಾದ ಮೂಲ ಮಾಹಿತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ನೀಡುವುದು ನಮ್ಮ ಜವಾಬ್ದಾರಿ.",
   },
 
   gallery: {
