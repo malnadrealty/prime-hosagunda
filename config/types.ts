@@ -28,14 +28,14 @@ export type InventoryResult = {
   error?: string;
 };
 
-/** Client-safe plot: public fields only, status collapsed to two values. */
+/** Client-safe plot: public fields only, with full status for UI coloring. */
 export type PublicPlot = {
   plotNumber: string;
   areaAcres: number;
   areaGunta?: number;
   pricePerGunta: number;
   totalPrice: number;
-  status: "AVAILABLE" | "BOOKED";
+  status: PlotStatus;
 };
 
 export type PublicInventory = {
