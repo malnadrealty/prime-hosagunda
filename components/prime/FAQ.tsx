@@ -32,8 +32,8 @@ export default function FAQ() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow mb-3">FAQ</p>
-              <h2 className="text-3xl font-bold tracking-tight text-forest-900 sm:text-4xl">
-                Before You Reach Out.
+              <h2 className="kannada text-3xl font-bold tracking-tight text-forest-900 sm:text-4xl">
+                ನೀವು ಕೇಳಬಹುದಾದ ಪ್ರಶ್ನೆಗಳು.
               </h2>
             </div>
             <button

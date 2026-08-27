@@ -113,7 +113,7 @@ export const hosagunda: PropertyConfig = {
       "Coffee, Pepper ಮತ್ತು Coconut ಕೂಡ ಇಲ್ಲಿವೆ.",
       "ಅಂದರೆ, ನೀವು ಶೂನ್ಯದಿಂದ ಶುರು ಮಾಡಬೇಕಿಲ್ಲ.",
       "ಈಗಾಗಲೇ ಬೆಳೆಯುತ್ತಿರುವ ತೋಟದ ನಡುವೆ",
-      "ನಿಮ್ಮದೇ ಒಂದು ಜಾಗ ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳಬಹುದು.",
+      "ನಿಮ್ಮದೇ ಒಂದು ಪ್ಲಾಟ ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳಬಹುದು.",
     ],
     closing: "14 Acres · 6 Plots · Hosagunda, Sagara Taluk",
   },
@@ -152,12 +152,12 @@ export const hosagunda: PropertyConfig = {
 
   // Six parcels laid out on a 0..100 grid — a clean 3×2 masterplan sketch.
   masterplan: {
-    headingKannada: "ನಿಮ್ಮ ಜಾಗ ಯಾವುದು?",
-    mainLine: "14 ಎಕರೆ. 6 ಜಾಗಗಳು.",
+    headingKannada: "ನಿಮ್ಮ ಪ್ಲಾಟ ಯಾವುದು?",
+    mainLine: "14 ಎಕರೆ. 6 ಪ್ಲಾಟ್ ಗಳು.",
     supportingLine: "1 ಎಕರೆದಿಂದ 2 ಎಕರೆವರೆಗೆ",
-    description: "ಈ ಜಮೀನನ್ನು 6 ಪ್ರತ್ಯೇಕ ಜಾಗಗಳಾಗಿ ವಿಂಗಡಿಸಲಾಗಿದೆ.",
-    highlight: "ನಿಮಗೆ ಸರಿಹೊಂದುವ ಜಾಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
-    tapInstruction: "ಜಾಗದ ಮೇಲೆ Tap ಮಾಡಿ",
+    description: "ಈ ಜಮೀನನ್ನು 6 ಪ್ರತ್ಯೇಕ ಪ್ಲಾಟ್ ಗಳಾಗಿ ವಿಂಗಡಿಸಲಾಗಿದೆ.",
+    highlight: "ನಿಮಗೆ ಸರಿಹೊಂದುವ ಪ್ಲಾಟವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+    tapInstruction: "ಪ್ಲಾಟದ ಮೇಲೆ Tap ಮಾಡಿ",
     tapDetails: "ಗಾತ್ರ · ಬೆಲೆ · ಲಭ್ಯತೆ",
     plots: [
       { plotNumber: "01", points: "4,6 35,6 35,50 4,50", label: { x: 19.5, y: 28 } },
@@ -178,13 +178,13 @@ export const hosagunda: PropertyConfig = {
     headingKannada: "ಬೆಲೆ ತಿಳಿಯಲು Call ಮಾಡಬೇಕಿಲ್ಲ.",
     mainLineKannada: "ಎಲ್ಲಾ ವಿವರಗಳು ಇಲ್ಲೇ ಸ್ಪಷ್ಟವಾಗಿವೆ.",
     checklist: [
-      "ಜಾಗದ ಗಾತ್ರ",
+      "ಪ್ಲಾಟದ ಗಾತ್ರ",
       "ಪ್ರತಿ ಗುಂಟೆಯ ಬೆಲೆ",
       "ಒಟ್ಟು ಬೆಲೆ",
       "ಲಭ್ಯತೆ",
     ],
     updatedNote: "Prices and availability are updated regularly.",
-    closingKannada: "ನಿಮ್ಮ Budgetಗೆ ಹೊಂದುವ ಜಾಗವನ್ನು ಇಲ್ಲೇ ಆಯ್ಕೆ ಮಾಡಿ.",
+    closingKannada: "ನಿಮ್ಮ Budgetಗೆ ಹೊಂದುವ ಪ್ಲಾಟವನ್ನು ಇಲ್ಲೇ ಆಯ್ಕೆ ಮಾಡಿ.",
     disclaimer:
       "Applicable registration, government and other charges, if any, will be communicated clearly before purchase.",
   },
@@ -222,19 +222,19 @@ export const hosagunda: PropertyConfig = {
   },
 
   finalCTA: {
-    headingKannada: ["ಫೋಟೋದಲ್ಲಿ ನೋಡಿದಿರಿ.", "ಈಗ ಜಾಗಕ್ಕೆ ಬಂದು ನೋಡಿ."],
+    headingKannada: ["ಫೋಟೋದಲ್ಲಿ ನೋಡಿದಿರಿ.", "ಈಗ ಪ್ಲಾಟಕ್ಕೆ ಬಂದು ನೋಡಿ."],
     statements: [
       "ತೋಟವನ್ನು ನೋಡಿ.",
       "ಮಣ್ಣನ್ನು ಕೈಯಲ್ಲಿ ಹಿಡಿದು ನೋಡಿ.",
-      "ಜಾಗವನ್ನು ನಡೆದು ನೋಡಿ.",
-      "ನಿಮಗೆ ಇಷ್ಟವಾದ ಜಾಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+      "ಪ್ಲಾಟವನ್ನು ನಡೆದು ನೋಡಿ.",
+      "ನಿಮಗೆ ಇಷ್ಟವಾದ ಪ್ಲಾಟವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
     ],
     ctaHeading: "COME SEE THE LAND.",
     ctaPrimary: "SCHEDULE A SITE VISIT",
     ctaSecondary: "WHATSAPP MALNAD REALTY",
-    closingKannada: ["ಬೆಳೆದಿರುವ ತೋಟದ ನಡುವೆ", "ನಿಮ್ಮದೇ ಒಂದು ಜಾಗ."],
+    closingKannada: ["ಬೆಳೆದಿರುವ ತೋಟದ ನಡುವೆ", "ನಿಮ್ಮದೇ ಒಂದು ಪ್ಲಾಟ."],
     tagline: "14 Acres · 6 Plots · Hosagunda",
-    finalMessage: "ನಿಮ್ಮ ಜಾಗ ಇಲ್ಲಿರಬಹುದು.",
+    finalMessage: "ನಿಮ್ಮ ಪ್ಲಾಟ ಇಲ್ಲಿರಬಹುದು.",
   },
 
   faq: [
@@ -247,11 +247,11 @@ export const hosagunda: PropertyConfig = {
       a: "14 Acres.",
     },
     {
-      q: "ಎಷ್ಟು ಜಾಗಗಳಿವೆ?",
-      a: "ಒಟ್ಟು 6 ಜಾಗಗಳು.",
+      q: "ಎಷ್ಟು ಪ್ಲಾಟ್ ಗಳಿವೆ?",
+      a: "ಒಟ್ಟು 6 ಪ್ಲಾಟ್ ಗಳು.",
     },
     {
-      q: "ಜಾಗಗಳ ಗಾತ್ರ ಎಷ್ಟು?",
+      q: "ಪ್ಲಾಟ್ ಗಳ ಗಾತ್ರ ಎಷ್ಟು?",
       a: "1 ಎಕರೆದಿಂದ 2 ಎಕರೆವರೆಗೆ.",
     },
     {
