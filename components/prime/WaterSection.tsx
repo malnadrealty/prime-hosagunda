@@ -1,7 +1,6 @@
 "use client";
 
 import { usePrime } from "./PrimeContext";
-import Slot from "./ui/Slot";
 import Reveal from "./ui/Reveal";
 
 // Cinematic, editorial "Water" moment. Charcoal + red brand palette (no blue
@@ -16,22 +15,7 @@ export default function WaterSection() {
       id="water"
       className="relative scroll-mt-16 overflow-hidden bg-forest-950 text-ivory"
     >
-      <div className="grid grid-cols-1 lg:min-h-[620px] lg:grid-cols-[1.12fr_0.88fr]">
-        {/* Cinematic property image */}
-        <Reveal className="relative min-h-[320px] sm:min-h-[400px] lg:min-h-full">
-          <Slot
-            src={w.image}
-            alt="Water across the Hosagunda plantation"
-            label={w.imageLabel}
-            className="absolute inset-0 h-full w-full"
-            imgClassName="transition-transform duration-[1200ms] ease-out"
-            sizes="(min-width: 1024px) 58vw, 100vw"
-            eager={false}
-          />
-          {/* Blend the image edge into the content panel */}
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/20 to-transparent lg:bg-gradient-to-r" />
-        </Reveal>
-
+      <div className="grid grid-cols-1 lg:grid-cols-1">
         {/* Editorial content */}
         <div className="relative flex flex-col justify-center px-5 py-14 sm:px-8 lg:px-14 lg:py-20">
           {/* Extremely subtle water contour lines */}

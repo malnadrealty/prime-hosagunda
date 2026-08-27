@@ -1,7 +1,6 @@
 "use client";
 
 import { usePrime } from "./PrimeContext";
-import Slot from "./ui/Slot";
 import Reveal from "./ui/Reveal";
 import { LeafIcon } from "./ui/Icons";
 
@@ -46,23 +45,6 @@ export default function StorySection() {
           <p className="accent-script mt-8 text-[1.5rem] sm:text-[1.75rem] font-semibold leading-[1.35]">{s.closing}</p>
         </Reveal>
 
-        <Reveal delay={120} className="lg:sticky lg:top-24">
-          <div className="relative overflow-hidden rounded-xl2 shadow-card">
-            <Slot
-              src={`/properties/${property.slug}/rich-soil.png`}
-              alt="A handful of fertile red soil from the Hosagunda plantation"
-              label="GOOD RED SOIL"
-              variant="soil"
-              className="aspect-[5/4] w-full"
-              sizes="(min-width: 1024px) 40vw, 100vw"
-            />
-            {/* Label overlaid on the image, bottom-left */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-soil-700/85 to-transparent p-5">
-              <p className="text-sm font-bold uppercase tracking-wide text-ivory">Good Red Soil</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-ivory/75">Fertile &amp; Rich</p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
