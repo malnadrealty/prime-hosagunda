@@ -202,7 +202,7 @@ export default function PlotInventory() {
                         premium ? "bg-white/5 text-ivory/55" : "bg-forest-700/5 text-forest-900/70"
                       }`}
                     >
-                      Currently {plot.status.toLowerCase()}
+                      {plot.status}
                     </p>
                   )}
                 </article>
