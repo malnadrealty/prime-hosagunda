@@ -43,7 +43,7 @@ function normalizeStatus(v: unknown): PlotStatus {
   const s = String(v ?? "").trim().toUpperCase();
   if (s.startsWith("AVAIL")) return "AVAILABLE";
   if (s.startsWith("BOOK")) return "BOOKED";
-  if (s.startsWith("HOLD")) return "HOLD";
+  if (s.startsWith("HOLD") || s.startsWith("RESERV")) return "HOLD";
   if (s.startsWith("SOLD")) return "SOLD";
   return (VALID_STATUSES as string[]).includes(s) ? (s as PlotStatus) : "AVAILABLE";
 }
