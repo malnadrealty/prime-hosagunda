@@ -204,13 +204,10 @@ export const hosagunda: PropertyConfig = {
     subtitle: ["NO RENDERS.", "NO ARTIFICIAL VIEWS."],
     supporting: "ಈ ಫೋಟೋಗಳು ಇದೇ ಜಮೀನಿನಲ್ಲಿ ತೆಗೆದವು.",
     items: [
-      { src: `${IMG}/gallery/areca.jpg`, alt: "Areca palms at Hosagunda", caption: "Areca", category: "CROPS" },
-      { src: `${IMG}/gallery/coffee.jpg`, alt: "Coffee plants at Hosagunda", caption: "Coffee", category: "CROPS" },
-      { src: `${IMG}/gallery/rubber.jpg`, alt: "Rubber tapping at Hosagunda", caption: "Rubber", category: "CROPS" },
-      { src: `${IMG}/gallery/pepper.jpg`, alt: "Pepper vines at Hosagunda", caption: "Pepper", category: "CROPS" },
-      { src: `${IMG}/gallery/coconut.jpg`, alt: "Coconut palms at Hosagunda", caption: "Coconut", category: "CROPS" },
-      { src: `${IMG}/gallery/red-soil.jpg`, alt: "Fertile red soil at Hosagunda", caption: "Red Soil", category: "SOIL" },
-      { src: `${IMG}/gallery/landscape.jpg`, alt: "Plantation landscape at Hosagunda", caption: "Landscape", category: "LAND" },
+      { src: `${IMG}/gallery/farmland-01.jpg`, alt: "Farmland at Hosagunda - Area 1" },
+      { src: `${IMG}/gallery/farmland-02.jpg`, alt: "Farmland at Hosagunda - Area 2" },
+      { src: `${IMG}/gallery/farmland-03.jpg`, alt: "Farmland at Hosagunda - Area 3" },
+      { src: `${IMG}/gallery/farmland-04.jpg`, alt: "Farmland at Hosagunda - Area 4" },
     ],
   },
 

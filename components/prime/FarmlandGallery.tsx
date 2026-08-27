@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
+import { getAssetPath } from "@/lib/useBasePath";
 import Reveal from "./ui/Reveal";
 
 export type GalleryImage = {
@@ -67,7 +68,7 @@ function GalleryCard({
         <div className="relative w-full overflow-hidden bg-forest-100" style={{ aspectRatio: "4/5" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={image.src}
+            src={getAssetPath(image.src)}
             alt={image.alt}
             className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             loading="lazy"
