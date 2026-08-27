@@ -72,7 +72,7 @@ export default function FinalCTA() {
 
         {/* Right — stat strip */}
         <Reveal delay={100}>
-          <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
+          <div className="hidden lg:grid grid-cols-1 gap-3">
             {STATS.map(({ value, unit, label, Icon }) => (
               <div
                 key={unit}
