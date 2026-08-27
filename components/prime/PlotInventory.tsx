@@ -149,10 +149,10 @@ export default function PlotInventory() {
                     </span>
                   </div>
 
-                  <p className={`mt-2 text-h3 font-extrabold leading-tight tracking-tight ${premium ? "text-ivory" : "text-forest-900"}`}>
+                  <p className={`mt-2 text-h3 font-extrabold leading-tight tracking-tight ${premium ? (available || booked ? "text-forest-900" : "text-ivory") : "text-forest-900"}`}>
                     {gunta ?? `${plot.areaAcres.toFixed(2)} Acres`}
                   </p>
-                  <p className={`text-tiny ${premium ? "text-ivory/50" : "text-forest-900/70"}`}>
+                  <p className={`text-tiny ${premium ? (available || booked ? "text-forest-900/70" : "text-ivory/50") : "text-forest-900/70"}`}>
                     {formatAcresApprox(plot.areaAcres)}
                   </p>
 
@@ -168,14 +168,14 @@ export default function PlotInventory() {
                             : "border-forest-700/8"
                   }`}>
                     <div className="flex items-center justify-between">
-                      <dt className={premium ? "text-ivory/55" : "text-forest-900/70"}>/ Gunta</dt>
-                      <dd className={`font-semibold ${premium ? "text-ivory" : "text-forest-900"}`}>
+                      <dt className={premium ? (available || booked ? "text-forest-900/70" : "text-ivory/55") : "text-forest-900/70"}>/ Gunta</dt>
+                      <dd className={`font-semibold ${premium ? (available || booked ? "text-forest-900" : "text-ivory") : "text-forest-900"}`}>
                         {formatRupees(plot.pricePerGunta)}
                       </dd>
                     </div>
                     <div className="flex items-baseline justify-between">
-                      <dt className={premium ? "text-ivory/55" : "text-forest-900/70"}>Total</dt>
-                      <dd className={`text-base font-extrabold ${premium ? "text-moss" : "text-forest-600"}`}>
+                      <dt className={premium ? (available || booked ? "text-forest-900/70" : "text-ivory/55") : "text-forest-900/70"}>Total</dt>
+                      <dd className={`text-base font-extrabold ${premium ? (available || booked ? "text-forest-600" : "text-moss") : "text-forest-600"}`}>
                         {formatPriceINR(plot.totalPrice)}
                       </dd>
                     </div>
