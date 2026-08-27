@@ -98,18 +98,18 @@ export default function PlotInventory() {
                     : "border-forest-700/10 bg-white text-forest-900";
 
             const statusTextClass = available
-              ? "text-forest-500"
+              ? "text-forest-900"
               : booked
-                ? "text-blue-600"
+                ? "text-forest-900"
                 : reserved
                   ? premium
                     ? "text-ivory"
-                    : "text-orange-600"
+                    : "text-orange-900"
                   : sold
                     ? premium
                       ? "text-ivory"
-                      : "text-gray-600"
-                    : "text-forest-500";
+                      : "text-gray-900"
+                    : "text-forest-900";
 
             return (
               <Reveal key={plot.plotNumber} delay={(i % 6) * 40}>
