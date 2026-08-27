@@ -124,11 +124,11 @@ export default function PlotInventory() {
                   )}
 
                   <div className={`flex items-center justify-between ${premium ? "mt-1.5" : ""}`}>
-                    <p className={`text-tiny font-bold uppercase tracking-[0.16em] ${premium ? (booked ? "text-forest-900" : "text-moss") : statusTextClass}`}>
+                    <p className={`text-tiny font-bold uppercase tracking-[0.16em] ${premium ? (available || booked ? "text-forest-900" : "text-ivory") : statusTextClass}`}>
                       Plot {plot.plotNumber}
                     </p>
                     <span
-                      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider ${premium ? (booked ? "text-forest-900" : "text-ivory/50") : statusTextClass}`}
+                      className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider ${premium ? (available || booked ? "text-forest-900" : "text-ivory") : statusTextClass}`}
                     >
                       <span
                         className={`h-1.5 w-1.5 rounded-full ${
