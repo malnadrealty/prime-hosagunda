@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { track } from "@/lib/analytics";
-import { WhatsAppIcon, MenuIcon, CloseIcon, CalendarIcon } from "./ui/Icons";
+import { WhatsAppIcon, CalendarIcon } from "./ui/Icons";
 
 const NAV = [
   { label: "Story", href: "#story" },
@@ -18,7 +18,6 @@ const NAV = [
 
 export default function PrimeHeader() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -33,9 +32,7 @@ export default function PrimeHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 transition-colors duration-300 ${
-        menuOpen ? "z-50" : "z-40"
-      } ${
+      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
         scrolled
           ? "bg-ivory/95 shadow-[0_1px_0_rgba(31,64,41,0.08)] backdrop-blur"
           : "bg-gradient-to-b from-black/45 to-transparent"
@@ -71,55 +68,9 @@ export default function PrimeHeader() {
             <CalendarIcon width={15} height={15} />
             Site Visit
           </a>
-
-          {/* Hamburger — mobile only */}
-          <button
-            type="button"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((v) => !v)}
-            className={`inline-flex h-11 w-11 items-center justify-center rounded-lg lg:hidden ${
-              scrolled ? "text-forest-800" : "text-ivory"
-            }`}
-          >
-            {menuOpen ? <CloseIcon /> : <MenuIcon />}
-          </button>
         </div>
       </div>
 
-      {/* Mobile menu overlay */}
-      {menuOpen && (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-[100] lg:hidden animate-fade-in bg-forest-950/95 backdrop-blur overflow-y-auto pointer-events-auto" onClick={() => setMenuOpen(false)}>
-          <nav
-            className="flex flex-col gap-1 px-6 py-6 pointer-events-auto"
-            aria-label="Mobile"
-            onClick={(e) => e.stopPropagation()}
-          >
-              {NAV.map((n) => (
-                <a
-                  key={n.href}
-                  href={n.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="border-b border-white/10 py-3.5 text-lg font-medium text-ivory"
-                >
-                  {n.label}
-                </a>
-              ))}
-              <a
-                href={waSiteVisit}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  setMenuOpen(false);
-                  track("prime_site_visit_open", { source: "mobile_menu" });
-                }}
-                className="btn-green mt-4 w-full"
-              >
-                Plan a Site Visit
-              </a>
-            </nav>
-        </div>
-      )}
     </header>
   );
 }
