@@ -17,17 +17,30 @@ export default function PrimeHero() {
 
   return (
     <section className="relative min-h-[92svh] w-full overflow-hidden bg-forest-950 pt-16 text-ivory">
-      {/* Background */}
+      {/* Mobile: Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover lg:hidden"
+      >
+        <source src={`/properties/${property.slug}/hero-video.mp4`} type="video/mp4" />
+      </video>
+
+      {/* Desktop: Image Background */}
       <Slot
         src={`/properties/${property.slug}/hero.jpg`}
         alt="Established plantation at Hosagunda, Sagara Taluk"
         label=""
         eager
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 hidden h-full w-full lg:block"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-950/80 via-forest-950/45 to-forest-950/92" />
-      <div className="absolute inset-0 bg-gradient-to-r from-forest-950/70 via-transparent to-transparent" />
+
+      {/* Tint Overlay for Text Visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-950/85 via-forest-950/50 to-forest-950/92" />
+      <div className="absolute inset-0 bg-gradient-to-r from-forest-950/75 via-transparent to-transparent" />
 
       <div className="prime-container relative z-10 grid min-h-[calc(92svh-4rem)] grid-cols-1 items-center gap-10 py-10 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Left — messaging */}
