@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/hosagunda',
   reactStrictMode: true,
   images: {
     // Allow remote plantation imagery / YouTube posters if a config points to them.
