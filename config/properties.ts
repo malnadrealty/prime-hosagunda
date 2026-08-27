@@ -28,7 +28,7 @@ export const hosagunda: PropertyConfig = {
   eyebrow: "HOSAGUNDA · SAGARA TALUK",
   headlineKannada: ["ಜಮೀನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?", "ಒಮ್ಮೆ ಈ ತೋಟ ನೋಡಿ."],
   headlineEnglish: ["Looking for land?", "See this plantation."],
-  heroSupport: "14 Acres of Green. 6 Plots in Hosagunda.",
+  heroSupport: "6 Private Farm Plots in 14 Acres of Lush Green",
   cropLine: "Areca · Coffee · Rubber · Coconut · Pepper",
   inventoryLine: "2 KM from NH 206 · Bangalore–Honnavar Highway",
 
