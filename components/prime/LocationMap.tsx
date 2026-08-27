@@ -35,11 +35,7 @@ export default function LocationMap({ property }: { property: PropertyConfig }) 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const reduce =
-      typeof window.matchMedia === "function" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce || typeof IntersectionObserver === "undefined") {
-      setInView(true);
+    if (typeof IntersectionObserver === "undefined") {
       return;
     }
     const io = new IntersectionObserver(
@@ -54,10 +50,8 @@ export default function LocationMap({ property }: { property: PropertyConfig }) 
       { threshold: 0.25 }
     );
     io.observe(el);
-    const fallback = window.setTimeout(() => setInView(true), 1800);
     return () => {
       io.disconnect();
-      window.clearTimeout(fallback);
     };
   }, []);
 
