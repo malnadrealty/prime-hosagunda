@@ -13,6 +13,7 @@ export type GalleryImage = {
 export default function FarmlandGallery({ images }: { images: GalleryImage[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -23,6 +24,47 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
       return () => document.removeEventListener("keydown", handleEscape);
     }
   }, [selectedImage]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasScrolled && scrollRef.current) {
+          setHasScrolled(true);
+          triggerAutoScroll();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (scrollRef.current) {
+      observer.observe(scrollRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasScrolled]);
+
+  const triggerAutoScroll = () => {
+    if (!scrollRef.current) return;
+
+    const element = scrollRef.current;
+    const scrollAmount = 300;
+    let scrollDirection = 1;
+    let cycles = 0;
+
+    const autoScroll = setInterval(() => {
+      element.scrollLeft += scrollAmount * scrollDirection;
+      cycles++;
+
+      if (cycles >= 2) {
+        scrollDirection *= -1;
+        cycles = 0;
+      }
+
+      if (element.scrollLeft === 0) {
+        clearInterval(autoScroll);
+      }
+    }, 600);
+  };
 
   return (
     <section id="gallery" className="scroll-mt-16 bg-cream py-16 sm:py-24">
