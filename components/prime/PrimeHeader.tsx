@@ -87,16 +87,12 @@ export default function PrimeHeader() {
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="lg:hidden">
-          <div
-            className="fixed inset-0 top-16 z-50 animate-fade-in bg-forest-950/95 backdrop-blur"
-            onClick={() => setMenuOpen(false)}
+        <div className="fixed inset-0 top-16 z-50 lg:hidden animate-fade-in bg-forest-950/95 backdrop-blur overflow-y-auto">
+          <nav
+            className="flex flex-col gap-1 px-6 py-6"
+            aria-label="Mobile"
+            onClick={(e) => e.stopPropagation()}
           >
-            <nav
-              className="prime-container flex flex-col gap-1 py-6"
-              aria-label="Mobile"
-              onClick={(e) => e.stopPropagation()}
-            >
               {NAV.map((n) => (
                 <a
                   key={n.href}
@@ -120,7 +116,6 @@ export default function PrimeHeader() {
                 Plan a Site Visit
               </a>
             </nav>
-          </div>
         </div>
       )}
     </header>
