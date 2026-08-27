@@ -69,14 +69,6 @@ export default function FarmlandGallery({ images }: { images: GalleryImage[] }) 
   return (
     <section id="gallery" className="scroll-mt-16 bg-cream py-16 sm:py-24">
       <div className="prime-container">
-        <Reveal>
-          <p className="eyebrow mb-4">FARMLAND VIEWS</p>
-          <h2 className="text-h2 text-forest-900">Explore the Property</h2>
-          <p className="mt-2 text-body text-forest-900/70">
-            Swipe through different areas of our lush farmland
-          </p>
-        </Reveal>
-
         {/* Mobile: Horizontal Scroll Gallery */}
         <Reveal delay={80} className="mt-8">
           <div

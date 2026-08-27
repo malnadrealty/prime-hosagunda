@@ -28,14 +28,6 @@ export default function GallerySection() {
                 </span>
               ))}
             </h2>
-            <p className="mt-3 text-label font-semibold uppercase text-forest-600">
-              {galleryData.subtitle?.map((line, i) => (
-                <span key={i}>{line} </span>
-              ))}
-            </p>
-            <p className="mt-2 text-body leading-relaxed text-forest-900/65">
-              {galleryData.supporting}
-            </p>
           </Reveal>
         </div>
       </section>
