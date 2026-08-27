@@ -170,8 +170,8 @@ export const hosagunda: PropertyConfig = {
   },
 
   plotInventory: {
-    headingKannada: "ನಿಮ್ಮ ಜಾಗ ಆಯ್ಕೆ ಮಾಡಿ.",
-    subheadingKannada: "ಯಾವ ಜಾಗ ನಿಮಗೆ ಇಷ್ಟ?",
+    headingKannada: "AVAILABLE PLOTS",
+    subheadingKannada: "Choose Your Farm Plot",
   },
 
   pricing: {
