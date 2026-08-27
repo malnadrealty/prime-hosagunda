@@ -1,3 +1,7 @@
+"use client";
+
+import { getAssetPath } from "@/lib/useBasePath";
+
 // Malnad Realty PRIME logo. Two artworks — a white wordmark for dark
 // backgrounds and a black wordmark for light backgrounds. Both are rendered and
 // toggled by `tone` so switching on scroll never flickers (both load once).
@@ -17,7 +21,7 @@ export default function Logo({
     <span className={`inline-flex items-center ${className}`}>
       {/* eslint-disable @next/next/no-img-element */}
       <img
-        src="/brand/mr-prime-logo-dark.webp"
+        src={getAssetPath("/brand/mr-prime-logo-dark.webp")}
         alt="Malnad Realty PRIME"
         width={3169}
         height={466}
@@ -25,7 +29,7 @@ export default function Logo({
         className={`${imgCls} ${onDark ? "block" : "hidden"}`}
       />
       <img
-        src="/brand/mr-prime-logo-light.webp"
+        src={getAssetPath("/brand/mr-prime-logo-light.webp")}
         alt="Malnad Realty PRIME"
         width={3169}
         height={466}

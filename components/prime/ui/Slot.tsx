@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { getAssetPath } from "@/lib/useBasePath";
 
 // Labeled placeholder image slot. When a real photo exists at `src` it loads and
 // fades in over the placeholder; until then (or on error) the styled placeholder
@@ -28,7 +29,10 @@ export default function Slot({
   const imgRef = useRef<HTMLImageElement>(null);
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
-  const showImg = src && !failed;
+
+  // Prepend basePath if needed
+  const imageSrc = src ? getAssetPath(src) : undefined;
+  const showImg = imageSrc && !failed;
   const variantClass =
     variant === "soil" ? "img-slot--soil" : variant === "cream" ? "img-slot--cream" : "";
 
@@ -53,7 +57,7 @@ export default function Slot({
         // eslint-disable-next-line @next/next/no-img-element
         <img
           ref={imgRef}
-          src={src}
+          src={imageSrc}
           alt={alt}
           sizes={sizes}
           loading={eager ? "eager" : "lazy"}
