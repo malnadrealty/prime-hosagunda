@@ -33,7 +33,9 @@ export default function PrimeHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 transition-colors duration-300 ${
+        menuOpen ? "z-50" : "z-40"
+      } ${
         scrolled
           ? "bg-ivory/95 shadow-[0_1px_0_rgba(31,64,41,0.08)] backdrop-blur"
           : "bg-gradient-to-b from-black/45 to-transparent"
